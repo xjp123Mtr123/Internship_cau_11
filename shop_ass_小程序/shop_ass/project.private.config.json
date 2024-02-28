@@ -1,0 +1,64 @@
+{
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/financialReport/financialReport",
+          "pathName": "pages/financialReport/financialReport",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/inventoryCheck/inventoryCheck",
+          "pathName": "pages/inventoryCheck/inventoryCheck",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/purchase/purchase",
+          "pathName": "pages/purchase/purchase",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/register/register",
+          "pathName": "pages/register/register",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "setting": {
+    "urlCheck": false,
+    "compileHotReLoad": true
+  },
+  "libVersion": "2.25.4",
+  "projectname": "shop_ass"
+}

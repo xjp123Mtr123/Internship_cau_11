@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="list-container">
+    <block wx:for="{{stocks}}" wx:key="index">
+      <view class="stock-item">
+        <view class="item-info">
+          <view class="item-title">{{item.product_name}}</view>
+          <view class="item-detail">数量：{{item.quantity}}</view>
+          <view class="item-detail">价格：￥{{item.price}}</view>
+        </view>
+        <view class="item-actions">
+          <button class="edit-btn" bindtap="navigateToUpdateStock" data-id="{{item.id}}">编辑</button>
+          <button class="delete-btn" bindtap="deleteStock" data-id="{{item.id}}">删除</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

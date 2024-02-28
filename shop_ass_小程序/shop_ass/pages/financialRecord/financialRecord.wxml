@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="list-container">
+    <block wx:for="{{financialRecords}}" wx:key="index">
+      <view class="record-item">
+        <view class="item-section">
+          <text class="item-label">项目名称：</text>
+          <text class="item-content">{{item.item_name}}</text>
+        </view>
+        <view class="item-section">
+          <text class="item-label">金额：</text>
+          <text class="item-content">￥{{item.amount}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <button class="add-btn" bindtap="navigateToAddFinancialRecord">添加财务记录</button>
+</view>

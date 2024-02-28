@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="list-container">
+    <block wx:for="{{salesRecords}}" wx:key="index">
+      <view class="record-item">
+        <view class="item-section">
+          <text class="item-label">商品名称：</text>
+          <text class="item-content">{{item.product_name}}</text>
+        </view>
+        <view class="item-section">
+          <text class="item-label">数量：</text>
+          <text class="item-content">{{item.quantity}}</text>
+        </view>
+        <view class="item-section">
+          <text class="item-label">售价：</text>
+          <text class="item-content">￥{{item.sale_price}}</text>
+        </view>
+                <view class="item-section">
+                  <text class="item-label">成本：</text>
+          <text class="item-content">￥{{item.cost_price}}</text>
+        </view>
+        <view class="item-section">
+
+          <text class="item-label">利润：</text>
+          <text class="item-content">￥{{item.profit}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <button class="add-btn" bindtap="navigateToAddSalesRecord">添加销售记录</button>
+</view>

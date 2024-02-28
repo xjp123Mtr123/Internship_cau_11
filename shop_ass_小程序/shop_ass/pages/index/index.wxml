@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="button-grid">
+    <button class="grid-button" bindtap="navigateToPurchase">进货管理</button>
+    <button class="grid-button" bindtap="navigateTostockList">库存管理</button>
+    <button class="grid-button" bindtap="navigateToviewSalesRecord">销售管理</button>
+    <button class="grid-button" bindtap="navigateTofinancialRecord">财务管理</button>
+    <button class="grid-button" bindtap="navigateToeditUserInfo">信息管理</button>
+    <button class="grid-button" bindtap="navigateToinventoryCheck">我的提醒</button>
+  </view>
+  <button class="logout-button" bindtap="logout">退出登录</button>
+</view>

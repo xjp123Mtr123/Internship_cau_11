@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/financialReport/financialReport",
+    "pages/addSalesRecord/addSalesRecord",
+    "pages/editUserInfo/editUserInfo",
+    "pages/addFinancialRecord/addFinancialRecord",
+    "pages/financialRecord/financialRecord",
+    "pages/viewSalesRecord/viewSalesRecord",
+    "pages/inventoryCheck/inventoryCheck",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/my_info/my_info",
+    "pages/log_out/log_out",
+    "pages/purchase/purchase",
+    "pages/addPurchase/addPurchase",
+    "pages/stockList/stockList",
+    "pages/updateStock/updateStock"
+
+  ],
+  "window": {
+    "navigationBarTitleText": "我的摆摊助理"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/log_out/log_out",
+        "text": "退出"
+      },
+      {
+        "pagePath": "pages/my_info/my_info",
+        "text": "我的"
+      }
+    ]
+  }
+}

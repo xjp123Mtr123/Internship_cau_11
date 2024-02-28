@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="input-group">
+    <text>商品名称：</text>
+    <input class="input-field" type="text" placeholder="请输入商品名称" bindinput="inputProductName" />
+  </view>
+  <view class="input-group">
+    <text>销售数量：</text>
+    <input class="input-field" type="number" placeholder="请输入销售数量" bindinput="inputQuantity" />
+  </view>
+  <view class="input-group">
+    <text>售价：</text>
+    <input class="input-field" type="number" placeholder="请输入售价" bindinput="inputSalePrice" />
+  </view>
+  <view class="input-group">
+    <text>成本价：</text>
+    <input class="input-field" type="number" placeholder="请输入成本价" bindinput="inputCostPrice" />
+  </view>
+  <button class="submit-btn" bindtap="addSalesRecord">添加销售记录</button>
+</view>

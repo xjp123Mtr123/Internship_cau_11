@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="form-group">
+    <view class="input-group">
+      <text>数量：</text>
+      <input type="number" bindinput="inputQuantity" value="{{quantity}}" />
+    </view>
+    <view class="input-group">
+      <text>价格：</text>
+      <input type="number" bindinput="inputPrice" value="{{price}}" />
+    </view>
+    <button class="submit-btn" bindtap="updateStock">更新库存</button>
+  </view>
+</view>

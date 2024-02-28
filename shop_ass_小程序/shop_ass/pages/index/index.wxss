@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.grid-button {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #1e88e5;
+  color: white;
+}
+
+.logout-button {
+  margin-top: 20px; /* 与按钮网格的间距 */
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #f44336; /* 退出按钮的背景颜色 */
+  color: white;
+  width: 100%;
+  max-width: 100px; /* 与按钮网格的最大宽度一致 */
+}

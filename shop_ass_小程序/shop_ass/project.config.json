@@ -1,0 +1,31 @@
+{
+  "appid": "wx76168abff4f63ee0",
+  "projectname": "shop_ass",
+  "compileType": "miniprogram",
+  "libVersion": "3.3.4",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "coverView": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "enhance": true,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmRelationList": [],
+    "compileHotReLoad": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "ignoreDevUnusedFiles": true
+  },
+  "editorSetting": {
+    "tabIndent": "auto",
+    "tabSize": 2
+  },
+  "simulatorPluginLibVersion": {}
+}

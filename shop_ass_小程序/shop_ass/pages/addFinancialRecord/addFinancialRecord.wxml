@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="input-group">
+    <text class="label">项目名称：</text>
+    <input class="input-field" type="text" placeholder="请输入项目名称" bindinput="inputItemName" />
+  </view>
+  <view class="input-group">
+    <text class="label">金额：</text>
+    <input class="input-field" type="number" placeholder="正数为收入，负数为支出" bindinput="inputAmount" />
+  </view>
+  <button class="submit-btn" bindtap="addFinancialRecord">添加财务记录</button>
+</view>

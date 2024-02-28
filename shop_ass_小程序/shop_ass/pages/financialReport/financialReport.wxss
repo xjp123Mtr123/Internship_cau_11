@@ -1,0 +1,18 @@
+.container {
+  padding: 10px;
+}
+
+.report-container {
+  margin-top: 10px;
+}
+
+.record-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.record-item text {
+  display: block; /* 每项内容独占一行 */
+  margin-bottom: 5px;
+}

@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="report-container">
+    <block wx:for="{{financialData}}" wx:key="index">
+      <view class="record-item">
+        <text>项目名称：{{item.item_name}}</text>
+        <text>金额：￥{{item.amount.toFixed(2)}}</text>
+        <text>记录时间：{{item.record_time}}</text>
+      </view>
+    </block>
+  </view>
+</view>

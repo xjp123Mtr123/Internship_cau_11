@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="list-container">
+    <block wx:for="{{stocks}}" wx:key="index">
+      <view class="stock-item" wx:if="{{item.quantity < 5}}" style="background-color: #ffcccc;">
+        <view class="item-info">
+          <view class="item-title">{{item.product_name}}</view>
+          <view class="item-detail">类别：{{item.category}}</view>
+          <view class="item-detail">数量：{{item.quantity}}</view>
+          <view class="item-detail">价格：￥{{item.price}}</view>
+        </view>
+      </view>
+      <view class="stock-item" wx:else>
+        <view class="item-info">
+          <view class="item-title">{{item.product_name}}</view>
+          <view class="item-detail">类别：{{item.category}}</view>
+          <view class="item-detail">数量：{{item.quantity}}</view>
+          <view class="item-detail">价格：￥{{item.price}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
