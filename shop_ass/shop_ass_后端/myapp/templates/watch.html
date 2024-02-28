@@ -1,0 +1,28 @@
+{% extends 'guest_layout.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-header">邮件详情</h1>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h4>{{ email.subject }}</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{ email.body|truncatewords:30 }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">发件人：{{ email.sender }}</small><br>
+                            <small class="text-muted">收件人：{{ email.recipient }}</small><br>
+                            <small class="text-muted">时间戳：{{ email.sent_time }}</small>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+{% endblock %}

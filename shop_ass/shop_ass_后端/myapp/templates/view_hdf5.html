@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container">
+    <h2>HDF5 File Content</h2>
+    {% for name, dataset in data.items %}
+    <h3>{{ name }}</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                {% for i in dataset.0 %}
+                <th>Column {{ forloop.counter }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in dataset %}
+            <tr>
+                {% for item in row %}
+                <td>{{ item }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>用户管理</h2>
+    <a href="/myapp/create_user" class="btn btn-primary">创建用户</a>
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>用户名</th>
+                <th>邮箱</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <a href="/myapp/update_user/{{user.id}}" class="btn btn-secondary">编辑</a>
+                    <a href="/myapp/delete_user/{{user.id}}" class="btn btn-danger">删除</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

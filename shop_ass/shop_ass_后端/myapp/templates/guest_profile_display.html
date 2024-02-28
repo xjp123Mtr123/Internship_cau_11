@@ -1,0 +1,35 @@
+{% extends 'guest_layout.html' %}
+
+{% block content %}
+<div style="display:flex;justify-content:center;align-items:center">
+    <br>
+    <br>
+    <div class="col-sm-6 col-md-4">
+            <div class="caption">
+                <div style="display:flex;justify-content:center;align-items:center">
+                    <h3>姓名：{{user.name}}</h3>
+                </div>
+                                        <div style="display:flex;justify-content:center;align-items:center">
+            <h3>英文名：：{{user.english_name}}</h3>
+        </div>
+                <div style="display:flex;justify-content:center;align-items:center">
+                    <h3>个人签名：{{user.signature}}</h3>
+                </div>
+                <div style="display:flex;justify-content:center;align-items:center">
+                    <h3>个人介绍：{{user.bio}}</h3>
+                </div>
+                <div style="display:flex;justify-content:center;align-items:center">
+                    <h3>手机号码：{{user.phone}}</h3>
+                </div>
+                <div style="display:flex;justify-content:center;align-items:center">
+                    <h3>职业类型：{{user.skills}}</h3>
+                </div>
+                <div style="display:flex;justify-content:center;align-items:center">
+                    <p><a href="/myapp/guest_profile_edit" class="btn btn-primary" role="button">编辑</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

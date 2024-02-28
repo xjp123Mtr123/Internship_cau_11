@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/plugins/bootstrap-3.4.1/css/bootstrap.css' %}">
+    <!-- 引入FullCalendar所需的CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+
+    <!-- 引入jQuery和Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <!-- 引入FullCalendar库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+
+    <title>首页</title>
+    <style>
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: 0.3s;
+  }
+
+  .nav-link:hover {
+    opacity: 0.7;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    color: #2c3e50;
+  }
+    .footer-background {
+        background-image: url('{% static "/img/smart_traffic.png" %}');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        width: 100%;
+    }
+  {% block style %}{% endblock %}
+
+
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+<div class="navbar">
+    <div class="nav-links">
+                <a href="/myapp/report" class="nav-link">报表下载</a>
+
+        <a href="/myapp/stock_list" class="nav-link">库存数据</a>
+        <a href="/myapp/purchase_list" class="nav-link">进货数据</a>
+        <a href="/myapp/email_single_presentation" class="nav-link">查看邮件</a>
+        <div class="dropdown">
+            <a href="#" class="nav-link">帮助中心</a>
+            <div class="dropdown-content">
+
+                <a href="/myapp/display_questions">使用帮助</a>
+                <a href="/myapp/email_editor">发送邮件</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="#" class="nav-link">{{request.session.info.name}}</a>
+        <div class="dropdown-content">
+            <a href="/myapp/log_out">退出登录</a>
+            <a href="/myapp/guest_profile_display">个人信息</a>
+            <a href="/myapp/guest_profile_edit">信息维护</a>
+
+        </div>
+    </div>
+
+</div>
+
+{% block content %}{% endblock %}
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+
+<script src="{% static '/plugins/bootstrap-3.4.1/js/bootstrap.js' %}"></script>
+<script src="{% static '/plugins/bootstrap-3.4.1/js/jquery-3.6.0.js' %}"></script>
+</body>
+</html>

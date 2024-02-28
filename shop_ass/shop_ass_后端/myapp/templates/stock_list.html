@@ -1,0 +1,46 @@
+{% extends 'guest_layout.html' %}
+{% block content %}
+<h2>Stock List</h2>
+<form method="get">
+    <input type="text" name="search" placeholder="Search by product name">
+    <button type="submit">Search</button>
+</form>
+<table class="table">
+    <tr>
+        <th>Username</th>
+        <th>Category</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    {% for stock in stocks %}
+    <tr>
+        <td>{{ stock.username }}</td>
+        <td>{{ stock.category }}</td>
+        <td>{{ stock.product_name }}</td>
+        <td>{{ stock.quantity }}</td>
+        <td>{{ stock.price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- 分页控件 -->
+<div class="pagination">
+    <span class="step-links">
+        {% if stocks.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ stocks.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ stocks.number }} of {{ stocks.paginator.num_pages }}.
+        </span>
+
+        {% if stocks.has_next %}
+            <a href="?page={{ stocks.next_page_number }}">next</a>
+            <a href="?page={{ stocks.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+{% endblock %}

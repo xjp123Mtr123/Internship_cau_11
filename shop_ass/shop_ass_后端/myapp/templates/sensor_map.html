@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sensor Locations</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 800px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var sensorData = {{ sensor_data_json|safe }};
+        var congestionLevel = "{{ congestion_level|safe }}";
+        var sensorCoordinate = {{ sensor_coordinate|safe }};
+
+        var map = L.map('map').setView([34.05, -118.25], 10);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // 根据拥堵等级选择标记颜色
+        function getMarkerColor(congestionLevel) {
+            switch (congestionLevel) {
+                case 'light':
+                    return 'green';
+                case 'moderate':
+                    return 'yellow';
+                case 'heavy':
+                    return 'red';
+                case 'severe':
+                    return 'purple';
+                default:
+                    return 'blue'; // 默认颜色
+            }
+        }
+
+        // 将特定坐标标记为对应的拥堵等级颜色
+        var markerColor = getMarkerColor(congestionLevel);
+        L.circleMarker(sensorCoordinate, {
+            color: markerColor,
+            radius: 8,
+            fillOpacity: 0.8
+        }).addTo(map).bindPopup('Congestion Level: ' + congestionLevel);
+
+        // 将其他传感器位置添加到地图上
+        sensorData.forEach(function(sensor) {
+            if (sensor.latitude !== sensorCoordinate[0] || sensor.longitude !== sensorCoordinate[1]) {
+                L.circleMarker([sensor.latitude, sensor.longitude], {
+                    color: 'blue',
+                    radius: 5,
+                    fillOpacity: 0.5
+                }).addTo(map).bindPopup('Sensor ID: ' + sensor.sensor_id);
+            }
+        });
+    </script>
+</body>
+</html>
+

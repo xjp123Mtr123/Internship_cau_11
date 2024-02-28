@@ -1,0 +1,46 @@
+{% extends 'guest_layout.html' %}
+{% block content %}
+<h2>进货表</h2>
+<form method="get">
+    <input type="text" name="search" placeholder="Search by product name">
+    <button type="submit">Search</button>
+</form>
+<table class="table">
+    <tr>
+        <th>Username</th>
+        <th>Purchase Time</th>
+        <th>Category</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    {% for purchase in purchases %}
+    <tr>
+        <td>{{ purchase.username }}</td>
+        <td>{{ purchase.purchase_time }}</td>
+        <td>{{ purchase.category }}</td>
+        <td>{{ purchase.product_name }}</td>
+        <td>{{ purchase.quantity }}</td>
+        <td>{{ purchase.price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<div class="pagination">
+    <span class="step-links">
+        {% if purchases.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ purchases.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ purchases.number }} of {{ purchases.paginator.num_pages }}.
+        </span>
+
+        {% if purchases.has_next %}
+            <a href="?page={{ purchases.next_page_number }}">next</a>
+            <a href="?page={{ purchases.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+<a href="/myapp/download_purchase_csv">Download CSV</a>
+{% endblock %}

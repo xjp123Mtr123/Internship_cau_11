@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container mt-3">
+    <h2>管理员留言板</h2>
+    <div class="list-group">
+    {% for message in messages %}
+        <div class="list-group-item">
+            <p>{{ message.content }}</p>
+            <small class="text-muted">By {{ message.user.username }} on {{ message.created_at }}</small>
+            <!-- 评论按钮 -->
+            <a href="/myapp/admin_comment/{{message.id}}" class="btn btn-primary btn-sm">评论</a>
+            <!-- 显示回复 -->
+            <div class="comments mt-2">
+                {% for comment in message.comments.all %}
+                    <div class="comment">
+                        <p>{{ comment.content }}</p>
+                        <footer class="blockquote-footer">{{ comment.admin.username }} on {{ comment.created_at }}</footer>
+                    </div>
+                {% empty %}
+                    <p class="text-muted">暂无回复</p>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

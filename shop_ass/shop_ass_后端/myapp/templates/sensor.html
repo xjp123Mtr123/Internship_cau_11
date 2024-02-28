@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sensor Locations</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        /* 调整地图容器的高度和宽度 */
+        #map {
+            height: 800px; /* 高度调整为 800px */
+            width: 100%; /* 宽度调整为 100% */
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var sensorData = {{ sensor_data_json|safe }};
+
+        var map = L.map('map').setView([34.05, -118.25], 10); // 设置地图中心和缩放级别
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // 将传感器位置添加到地图上
+        sensorData.forEach(function(sensor) {
+            L.marker([sensor.latitude, sensor.longitude])
+                .addTo(map)
+                .bindPopup('Sensor ID: ' + sensor.sensor_id);
+        });
+    </script>
+</body>
+</html>

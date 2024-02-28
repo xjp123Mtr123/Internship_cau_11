@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>管理问题</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>问题标题</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for question in questions %}
+            <tr>
+                <td>{{ question.title }}</td>
+                <td>
+                    <form method="post" action="/myapp/delete_question/{{question.id}}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm">删除</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

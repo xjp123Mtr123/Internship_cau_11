@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Traffic Data</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Time</th>
+                {% if page_obj %}
+                    {% for sensor_id in page_obj.object_list.first.sensor_data.keys %}
+                        <th>{{ sensor_id }}</th>
+                    {% endfor %}
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in page_obj %}
+                <tr>
+                    <td>{{ item.timestamp }}</td>
+                    {% for sensor_id in item.sensor_data.keys %}
+                        <td>{{ item.sensor_data[sensor_id] }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

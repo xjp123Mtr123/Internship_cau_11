@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>评论留言</h2>
+    <!-- 显示留言内容 -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <p class="card-text">{{ message.content }}</p>
+            <p class="card-text"><small class="text-muted">By {{ message.user.username }} on {{ message.created_at }}</small></p>
+        </div>
+    </div>
+    <!-- 评论表单 -->
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="content" class="form-control mb-3" rows="3" required></textarea>
+        <button type="submit" class="btn btn-primary">提交评论</button>
+    </form>
+</div>
+{% endblock %}

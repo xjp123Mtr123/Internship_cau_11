@@ -1,0 +1,32 @@
+{% extends 'guest_layout.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>留言板</h2>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="content" class="form-control mb-3" rows="3" required></textarea>
+        <button type="submit" class="btn btn-primary">提交留言</button>
+    </form>
+    <hr>
+    {% for message in messages %}
+        <div class="card mb-2">
+            <div class="card-body">
+                <p>问题：{{ message.content }}</p>
+                <footer class="blockquote-footer">{{ message.user.username }} on {{ message.created_at }}</footer>
+                <!-- 显示回复 -->
+                <div class="comments mt-2">
+                    {% for comment in message.comments.all %}
+                        <div class="comment"><br>
+                            <p>管理员：{{ comment.content }}</p>
+                            <footer class="blockquote-footer">{{ comment.admin.username }} on {{ comment.created_at }}</footer>
+                        </div>
+                    {% empty %}
+                        <p class="text-muted">暂无回复</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

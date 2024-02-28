@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Flow</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="sensor_id">Sensor ID:</label>
+        <input type="text" id="sensor_id" name="sensor_id" required><br><br>
+
+        <label for="start_time">Start Time:</label>
+        <input type="datetime-local" id="start_time" name="start_time" required><br><br>
+
+        <label for="end_time">End Time:</label>
+        <input type="datetime-local" id="end_time" name="end_time" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
