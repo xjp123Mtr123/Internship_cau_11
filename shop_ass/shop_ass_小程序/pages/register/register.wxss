@@ -1,51 +1,106 @@
+/* 使用与登录页面相似的动态渐变背景 */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #eceff1;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 50%, #6a11cb 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+  padding: 20px;
 }
 
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 注册框样式调整以增加一致性和动态效果 */
 .register-box {
   width: 90%;
   max-width: 350px;
-  margin: 0 auto;
   padding: 40px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8); /* 增加透明度 */
+  border-radius: 20px; /* 圆角设计 */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* 更深的阴影效果 */
+  backdrop-filter: blur(10px); /* 背景模糊效果 */
+  transition: transform 0.3s ease-in-out; /* 添加过渡效果 */
 }
 
+.register-box:hover {
+  transform: scale(1.02); /* 鼠标悬浮时轻微放大 */
+}
+
+/* 标题样式优化 */
 .register-title {
   font-size: 24px;
   color: #333;
   text-align: center;
   margin-bottom: 30px;
-  font-weight: 500;
+  font-weight: bold; /* 字体加粗 */
 }
 
+/* 输入框样式调整，提升视觉反馈和一致性 */
 .input-field {
   width: 100%;
-  padding: 12px 15px;
+  padding: 15px 20px;
   margin-bottom: 20px;
-  border: 1px solid #cfd8dc;
-  border-radius: 4px;
+  border: 1px solid transparent; /* 优化边框 */
+  border-radius: 10px; /* 圆角设计 */
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 16px;
+  background-color: #f0f0f0; /* 背景色调整 */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加内阴影 */
+  transition: all 0.3s ease-in-out; /* 平滑过渡效果 */
 }
 
+.input-field:focus {
+  background-color: #ffffff; /* 聚焦时背景色变化 */
+  border-color: #4481eb; /* 聚焦时边框颜色变化 */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* 聚焦时内阴影深度 */
+}
+
+/* 注册按钮样式调整，与登录按钮保持一致性 */
 .register-btn {
   width: 100%;
-  background-color: #1e88e5;
-  color: white;
-  padding: 12px 15px;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(45deg, #4481eb 0%, #04befe 100%);
+  color: white;
 }
 
 .register-btn:hover {
-  background-color: #1565c0;
+  transform: translateY(-3px); /* 鼠标悬浮时上移效果更明显 */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* 增强阴影效果 */
+}
+
+/* 输入框样式调整，确保文字垂直居中 */
+.input-field {
+  width: 100%;
+  padding: 10px 20px; /* 减少上下内边距 */
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  /* 添加高度和行高属性 */
+  height: 48px; /* 根据需要调整高度，确保足够空间 */
+  line-height: 48px; /* 设置行高与高度一致 */
+}
+
+/* 调整聚焦时的样式 */
+.input-field:focus {
+  background-color: #ffffff;
+  border-color: #4481eb;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* 移除行高，让浏览器自动调整 */
+  line-height: normal;
 }
