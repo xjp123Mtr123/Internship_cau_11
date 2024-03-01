@@ -1,79 +1,94 @@
+/* 页面背景使用更动态的渐变色，增加视觉吸引力 */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #eceff1;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 50%, #6a11cb 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+  padding: 20px;
 }
 
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 登录框增加动态背景效果和改进的立体感 */
 .login-box {
-  width: 90%;
-  max-width: 350px;
-  margin: 0 auto;
-  padding: 40px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.8); /* 增加透明度以突出背景动态效果 */
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* 增强背景模糊效果 */
+  transition: transform 0.3s ease-in-out; /* 添加过渡效果提升交互体验 */
 }
 
+.login-box:hover {
+  transform: scale(1.02); /* 鼠标悬浮时轻微放大 */
+}
+
+/* 标题样式优化，更加醒目 */
 .login-title {
-  font-size: 24px;
+  font-size: 28px;
   color: #333;
   text-align: center;
-  margin-bottom: 30px;
-  font-weight: 500;
+  margin-bottom: 40px;
+  font-weight: bold; /* 加粗字体 */
 }
 
+/* 输入框聚焦效果和过渡动画优化 */
 .input-field {
   width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 20px;
-  border: 1px solid #cfd8dc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
-.login-btn {
-  width: 100%;
-  background-color: #1e88e5;
-  color: white;
-  padding: 12px 15px;
-  border: none;
-  border-radius: 4px;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  border: 1px solid transparent; /* 准备聚焦时的边框效果 */
+  border-radius: 10px;
   font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  background-color: #f0f0f0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out; /* 优化过渡效果 */
 }
 
-/* 其他样式保持不变 */
+.input-field:focus {
+  background-color: #ffffff;
+  border-color: #4481eb; /* 聚焦时边框颜色变化 */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
+/* 按钮的动态效果和视觉反馈增强 */
 .login-btn, .register-btn {
   width: 100%;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  margin-top: 10px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 15px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .login-btn {
-  background-color: #1e88e5;
+  background-image: linear-gradient(45deg, #4481eb 0%, #04befe 100%);
   color: white;
 }
 
-.login-btn:hover {
-  background-color: #1565c0;
+.login-btn:hover, .register-btn:hover {
+  transform: translateY(-3px); /* 鼠标悬浮时上移效果更明显 */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* 增强阴影效果 */
 }
 
 .register-btn {
-  background-color: #fff;
-  color: #1e88e5;
-  border: 1px solid #1e88e5;
+  background-color: #ffffff;
+  color: #4481eb;
+  border: 1px solid #4481eb;
 }
 
 .register-btn:hover {
-  background-color: #e3f2fd;
+  color: #04befe;
+  border-color: #04befe;
 }
