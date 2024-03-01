@@ -1,16 +1,22 @@
+var app =getApp();
+
 Page({
   data: {
     stockList: [],
-    searchQuery: ''
+    searchQuery: '',
+    
   },
   onLoad: function() {
+
+  },
+  onShow:function(){
     this.fetchStockList();
   },
   inputSearch: function(e) {
     this.setData({ searchQuery: e.detail.value });
   },
   searchStock: function() {
-    const app = getApp();
+    
     console.log(app.globalData.username); // 访问全局变量
 
     wx.request({
@@ -18,7 +24,7 @@ Page({
       header: {
         'Content-Type': 'application/json'
       },
-      url: 'http://43.142.142.224:8000/myapp/wx_SearchStockView/',
+      url: 'http://127.0.0.1:8000/myapp/wx_SearchStockView/',
       header: {
         'Content-Type': 'application/json'
       },
@@ -38,7 +44,7 @@ Page({
       header: {
         'Content-Type': 'application/json'
       },
-      url: 'http://43.142.142.224:8000/myapp/wx_GetStockListView/',
+      url: 'http://127.0.0.1:8000/myapp/wx_GetStockListView/',
       data: { query: '',
               username:app.globalData.username
        },

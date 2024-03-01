@@ -12,7 +12,7 @@ Page({
   addFinancialRecord: function() {
     const app = getApp();
     wx.request({
-      url: 'http://43.142.142.224:8000/myapp/wx_AddFinancialRecordView/',
+      url: 'http://127.0.0.1:8000/myapp/wx_AddFinancialRecordView/',
       data: {
         username: app.globalData.username,
         item_name: this.data.itemName,
@@ -22,6 +22,7 @@ Page({
         if (res.data.status) {
           wx.showToast({ title: '财务记录添加成功' });
           // 可以添加跳转或其他逻辑
+          wx.navigateBack(); // 返回库存列表页面
         }
       }
     });

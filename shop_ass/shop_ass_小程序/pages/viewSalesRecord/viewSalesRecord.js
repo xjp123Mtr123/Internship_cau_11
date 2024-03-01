@@ -2,7 +2,7 @@ Page({
   data: {
     salesRecords: []
   },
-  onLoad: function() {
+  onShow: function() {
     this.fetchSalesRecords();
   },
   navigateToAddSalesRecord: function() {
@@ -13,7 +13,7 @@ Page({
   fetchSalesRecords: function() {
     const app = getApp();
     wx.request({
-      url: 'http://43.142.142.224:8000/myapp/wx_GetSalesRecordView/',
+      url: 'http://127.0.0.1:8000/myapp/wx_GetSalesRecordView/',
       data: { username: app.globalData.username },
       success: res => {
         if (res.data.status) {

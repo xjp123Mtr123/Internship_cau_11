@@ -1,5 +1,5 @@
 {
-  "appid": "wx76168abff4f63ee0",
+  "appid": "wx2ad8ba3f67b86949",
   "projectname": "shop_ass",
   "compileType": "miniprogram",
   "libVersion": "3.3.4",
@@ -26,6 +26,5 @@
   "editorSetting": {
     "tabIndent": "auto",
     "tabSize": 2
-  },
-  "simulatorPluginLibVersion": {}
+  }
 }

@@ -20,7 +20,7 @@ Page({
   addSalesRecord: function() {
     const app = getApp();
     wx.request({
-      url: 'http://43.142.142.224:8000/myapp/wx_AddSalesRecordView/',
+      url: 'http://127.0.0.1:8000/myapp/wx_AddSalesRecordView/',
       data: {
         username: app.globalData.username,
         product_name: this.data.productName,
@@ -32,6 +32,7 @@ Page({
         if (res.data.status) {
           wx.showToast({ title: '销售记录添加成功' });
           // 可以添加跳转或其他逻辑
+          wx.navigateBack(); // 返回库存列表页面
         }
       }
     });

@@ -19,7 +19,7 @@ Page({
   },
   register: function() {
     wx.request({
-      url: 'http://43.142.142.224:8000/myapp/wx_register/', 
+      url: 'http://127.0.0.1:8000/myapp/wx_register/', 
       data: {
         name: this.data.name,
         password: this.data.password,
