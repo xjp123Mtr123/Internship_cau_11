@@ -1,11 +1,60 @@
 <view class="container">
+
+  <!-- Swiper container -->
+  <swiper indicator-dots="true" autoplay="true" interval="3000" circular="true" class="swiper">
+    <!-- Swiper items -->
+    <swiper-item>
+      <image src="/img/images/index_top1.webp" class="slide-image"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/img/images/index_top2.webp" class="slide-image"></image>
+    </swiper-item>
+    <!-- Additional swiper items -->
+  </swiper>
+  
+  <!-- Buttons container -->
   <view class="button-grid">
-    <button class="grid-button" bindtap="navigateToPurchase">进货管理</button>
-    <button class="grid-button" bindtap="navigateTostockList">库存管理</button>
-    <button class="grid-button" bindtap="navigateToviewSalesRecord">销售管理</button>
-    <button class="grid-button" bindtap="navigateTofinancialRecord">财务管理</button>
-    <button class="grid-button" bindtap="navigateToeditUserInfo">信息管理</button>
-    <button class="grid-button" bindtap="navigateToinventoryCheck">我的提醒</button>
+    <button class="grid-button" bindtap="navigateToPurchase">
+      <view class="button-content">
+        <image src="/img/images/index_mid1.png" class="icon"></image>
+        进货管理
+      </view>
+    </button>
+    <button class="grid-button" bindtap="navigateTostockList">
+      <view class="button-content">
+        <image src="/img/images/index_mid2.png" class="icon"></image>
+        库存管理
+      </view>
+    </button>
+    <button class="grid-button" bindtap="navigateToviewSalesRecord">
+      <view class="button-content">
+        <image src="/img/images/index_mid3.png" class="icon"></image>
+        销售管理
+      </view>
+    </button>
+    <button class="grid-button" bindtap="navigateTofinancialRecord">
+      <view class="button-content">
+        <image src="/img/images/index_mid4.png" class="icon"></image>
+        财务管理
+      </view>
+    </button>
+    <button class="grid-button" bindtap="navigateToeditUserInfo">
+      <view class="button-content">
+        <image src="/img/images/index_mid5.png" class="icon"></image>
+        信息管理
+      </view>
+    </button>
+    <button class="grid-button" bindtap="navigateToinventoryCheck">
+      <view class="button-content">
+        <image src="/img/images/index_mid6.png" class="icon"></image>
+        我的提醒
+      </view>
+    </button>
+    <button class="grid-button logout-button" bindtap="logout">
+      <view class="button-content">
+        <image src="/img/images/index_mid7.png" class="icon"></image>
+        退出登录
+      </view>
+    </button>
   </view>
-  <button class="logout-button" bindtap="logout">退出登录</button>
 </view>
