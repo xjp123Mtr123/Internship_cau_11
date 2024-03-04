@@ -1,10 +1,39 @@
 <view class='container'>
+  <image src="/img/images/background.png" class="background-image"></image>
   <view class='register-box'>
-    <view class='register-title'>用户注册</view>
-    <input class='input-field' bindinput='inputName' placeholder='用户名' name='name' type='text'/>
-    <input class='input-field' bindinput='inputPassword' placeholder='密码' name='password' type='password'/>
-    <input class='input-field' bindinput='inputPhone' placeholder='手机号码' name='phone' type='number'/>
-    <input class='input-field' bindinput='inputEmail' placeholder='邮箱' name='email' type='email'/>
-    <button class='register-btn' bindtap='register'>注册</button>
+    <!-- 注册标题 -->
+    <view class='register-title'>创建账户</view>
+
+    <!-- 用户名输入框 -->
+    <view class="input-container">
+      <image src="/img/images/user.png" class="icon"></image>
+      <input class='input-field' placeholder='用户名' name='username' type='text'/>
+    </view>
+
+    <!-- 手机号输入框 -->
+    <view class="input-container">
+      <image src="/img/images/phone.png" class="icon"></image>
+      <input class='input-field' placeholder='手机号' name='phone' type='text'/>
+    </view>
+    
+    <!-- 密码输入框 -->
+    <view class="input-container">
+      <image src="/img/images/password.png" class="icon"></image>
+      <input class='input-field' placeholder='密码' name='password' type='password'/>
+    </view>
+    
+    <!-- 确认密码输入框 -->
+    <view class="input-container">
+      <image src="/img/images/password-confirm.png" class="icon"></image>
+      <input class='input-field' placeholder='确认密码' name='passwordConfirm' type='password'/>
+    </view>
+    
+    <!-- 注册按钮 -->
+    <button class='register-btn'>注册</button>
+
+    <!-- 登录链接 -->
+    <view class="login-link">
+      <navigator>已有账户？登录</navigator>
+    </view>
   </view>
 </view>
