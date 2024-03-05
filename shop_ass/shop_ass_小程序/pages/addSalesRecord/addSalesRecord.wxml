@@ -3,13 +3,29 @@
     <input class="search-input" placeholder="搜索商品名称或类别" bindinput="inputSearch" />
     <button class="search-btn" bindtap="searchStock">搜索</button>
   </view>
+  <view class="list-container">
+    <block wx:for="{{stockList}}" wx:key="index">
+      <view class="list-item" bindtap="admitStock" data-product_name="{{item.product_name}}" data-quantity="{{item.quantity}}" data-price="{{item.price}}">
+        <view class="item-row">
+          <text class="item-label">商品名称：</text>
+          <text class="item-value">{{item.product_name}}</text>
+        </view>
+        <view class="item-row">
+          <text class="item-label">商品类别：</text>
+          <text class="item-value">{{item.category}}</text>
+        </view>
+      </view>
+      <!-- <button class="search-btn" bindtap="admitStock" data-product_name="{{item.product_name}}" data-quantity="{{item.quantity}}" data-price="{{item.price}}">选择</button> -->
+    
+    </block>
+  </view>
   <view class="input-group">
     <text>商品名称：</text>
-    <input class="input-field" type="text" placeholder="请输入商品名称" bindinput="inputProductName" />
+    <input class="input-field" type="text" placeholder="请输入商品名称" value="{{productName}}" bindinput="inputProductName" />
   </view>
   <view class="input-group">
     <text>销售数量：</text>
-    <input class="input-field" type="number" placeholder="请输入销售数量" bindinput="inputQuantity" />
+    <input class="input-field" type="number" value="{{quantity}}" placeholder="请输入销售数量" bindinput="inputQuantity" />
   </view>
   <view class="input-group">
     <text>售价：</text>
@@ -17,7 +33,7 @@
   </view>
   <view class="input-group">
     <text>成本价：</text>
-    <input class="input-field" type="number" placeholder="请输入成本价" bindinput="inputCostPrice" />
+    <input class="input-field" type="number" placeholder="请输入成本价" value="{{costPrice}}" bindinput="inputCostPrice" />
   </view>
   <button class="submit-btn" bindtap="addSalesRecord">添加销售记录</button>
 </view>

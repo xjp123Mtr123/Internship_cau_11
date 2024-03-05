@@ -55,6 +55,14 @@ Page({
       }
     });
   },
+  navigateToAddSamePurchase: function(e) {
+    const productName = e.currentTarget.dataset.product_name;
+    const category=e.currentTarget.dataset.category;
+    const price=e.currentTarget.dataset.price;
+    wx.navigateTo({
+      url: '/pages/addPurchase/addPurchase?productName=' + productName+'&category='+category+'&price='+price
+    });
+  },
   navigateToAddPurchase: function() {
     wx.navigateTo({
       url: '/pages/addPurchase/addPurchase'

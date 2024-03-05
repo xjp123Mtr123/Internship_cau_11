@@ -1,9 +1,9 @@
 <view class="container">
   <view class="form-group">
-    <input class="input-field" bindinput="inputProductName" placeholder="商品名称" />
-    <input class="input-field" bindinput="inputCategory" placeholder="商品类别" />
+    <input class="input-field" bindinput="inputProductName" value="{{productName}}" placeholder="商品名称" />
+    <input class="input-field" bindinput="inputCategory" value="{{category}}" placeholder="商品类别" />
     <input class="input-field" bindinput="inputQuantity" placeholder="商品数量" type="number" />
-    <input class="input-field" bindinput="inputPrice" placeholder="商品价格" type="number" />
+    <input class="input-field" bindinput="inputPrice" value="{{price}}" placeholder="商品价格" type="number" />
     <button class="submit-btn" bindtap="submitPurchase">提交进货信息</button>
   </view>
 </view>

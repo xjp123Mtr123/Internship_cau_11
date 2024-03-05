@@ -2,8 +2,13 @@ Page({
   data: {
     productName: '',
     category: '',
-    quantity: 0,
-    price: 0
+    quantity: '',
+    price: ''
+  },
+  onLoad: function(options) {
+    this.setData({ productName: options.productName });
+    this.setData({category:options.category});
+    this.setData({price:options.price});
   },
   inputProductName: function(e) {
     this.setData({ productName: e.detail.value });

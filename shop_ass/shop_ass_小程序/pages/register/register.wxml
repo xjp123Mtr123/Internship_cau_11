@@ -20,7 +20,7 @@
     <!-- 邮箱输入框 -->
     <view class="input-container">
       <image src="/img/images/email.png" class="icon"></image>
-      <input class='input-field' bindinput='inputEmail' placeholder='邮箱' name='passwordConfirm' type='password'/>
+      <input class='input-field' bindinput='inputEmail' placeholder='邮箱' name='passwordConfirm' type='text'/>
     </view>
     
       <!-- 密码输入框 -->
@@ -30,7 +30,7 @@
     </view>
 
     <!-- 注册按钮 -->
-    <button class='register-btn'>注册</button>
+    <button class='register-btn'  bindtap='register'>注册</button>
 
     <!-- 登录链接 -->
     <view class="login-link">
