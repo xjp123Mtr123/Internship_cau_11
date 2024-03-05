@@ -18,6 +18,7 @@
   height: 100%;
 }
 
+
 /* Buttons grid */
 .button-grid {
   width: calc(100% - 40px); /* Full width minus padding on both sides */
@@ -36,6 +37,7 @@
   display: block; /* Make the button block level so it takes a full row */
   text-align: center; /* Center button text */
 }
+
 
 /* Button content for icon and text alignment */
 .button-content {

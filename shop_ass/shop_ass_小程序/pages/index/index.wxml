@@ -1,5 +1,4 @@
 <view class="container">
-
   <!-- Swiper container -->
   <swiper indicator-dots="true" autoplay="true" interval="3000" circular="true" class="swiper">
     <!-- Swiper items -->

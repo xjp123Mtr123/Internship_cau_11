@@ -1,9 +1,51 @@
-<view class='container'>
+<view class='container' >
+  <image src="/img/images/background.png" class="background-image"></image>
   <view class='login-box'>
-    <view class='login-title'>欢迎登录</view>
-    <input class='input-field' bindinput='inputUsername' placeholder='用户名' name='username' type='text'/>
-    <input class='input-field' bindinput='inputPassword' placeholder='密码' name='password' type='password'/>
-    <button class='login-btn' bindtap='login'>登录</button>
-    <button class='register-btn' bindtap='navigateToRegister'>注册</button>
+    <!-- 登录标题 -->
+    <view class='login-title'>登录</view>
+    
+    <!-- 手机号/用户名输入框 -->
+    <view class="phoneCs">
+      <image src="/img/images/user.png" class="ph"></image>
+      <input class='input-field' bindinput='inputUsername' placeholder='请输入手机号/用户名' name='username' type='text'/>
+    </view>
+    
+    <!-- 密码输入框 -->
+    <view class="passwordCs">
+      <image src="/img/images/password.png" class="ps"></image>
+      <input class='input-field' bindinput='inputPassword' placeholder='请输入密码' name='password' type='password'/>
+      <image src="/images/eye-open.png" class="eye"></image>
+    </view>
+    
+    <!-- 登录按钮 -->
+    <view class="denglu">
+      <button class='login-btn' bindtap='login'>登录</button>
+    </view>
+    
+    <!-- 注册链接 -->
+    <view class="zhuce">
+      <navigator bindtap='navigateToRegister'>立即注册</navigator>
+      <navigator>忘记密码?</navigator>
+    </view>
+  </view>
+  
+  <!-- 协议区 -->
+  <view class="xieyi">
+    <checkbox class="isXY"></checkbox>
+    <view class="text-xy">同意小程序的《使用协议》</view>
+  </view>
+  
+  <!-- 提示框  使用以下方式登录 -->
+  <view class="v3">
+    <view class="line"></view>
+    <view class="lText">以下方式登录还在开发中。。。</view>
+    <view class="line"></view>
+  </view>
+  
+  <!-- qq  weixin  weibo 图标展示view -->
+  <view class="qwwIcon">
+    <image src="/img/images/weixin.png"></image>
+    <image src="/img/images/qq.png"></image>
+    <image src="/img/images/weibo.png"></image>
   </view>
 </view>

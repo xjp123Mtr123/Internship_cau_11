@@ -28,7 +28,7 @@ Page({
   updateUserInfo: function() {
     const app = getApp();
     wx.request({
-      url: 'http://43.142.142.224:8000/myapp/wx_UpdateUserInfoView/',
+      url: 'http://127.0.0.1:8000/myapp/wx_UpdateUserInfoView/',
       data: {
         username: app.globalData.username,
         name: this.data.name,

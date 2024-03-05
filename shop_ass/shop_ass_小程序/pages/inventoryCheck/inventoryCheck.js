@@ -2,13 +2,13 @@ Page({
   data: {
     stocks: []
   },
-  onLoad: function() {
-    this.fetchStocks();
+  onShow:function(){
+    this.fetchStocks(); // 重新加载库存
   },
   fetchStocks: function() {
     const app = getApp();
     wx.request({
-      url: 'http://43.142.142.224:8000/myapp/wx_StockListView/',
+      url: 'http://127.0.0.1:8000/myapp/wx_StockListView/',
       data: { 
         username:app.globalData.username
       },

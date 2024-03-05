@@ -1,94 +1,142 @@
-/* 页面背景使用更动态的渐变色，增加视觉吸引力 */
+/* 页面背景图样式 */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 确保背景图位于内容之下 */
+}
+/* 页面背景 */
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 50%, #6a11cb 100%);
-  background-size: 200% 200%;
-  animation: gradientShift 10s ease infinite;
-  padding: 20px;
+  position: relative; /* 为绝对定位的背景图提供定位上下文 */
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* 登录框增加动态背景效果和改进的立体感 */
+/* 登录框整体样式 */
 .login-box {
-  width: 100%;
-  max-width: 400px;
-  padding: 50px;
-  background-color: rgba(255, 255, 255, 0.8); /* 增加透明度以突出背景动态效果 */
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px); /* 增强背景模糊效果 */
-  transition: transform 0.3s ease-in-out; /* 添加过渡效果提升交互体验 */
+  width: 90%;
+  max-width: 500rpx;
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
 }
 
-.login-box:hover {
-  transform: scale(1.02); /* 鼠标悬浮时轻微放大 */
-}
-
-/* 标题样式优化，更加醒目 */
+/* 登录标题样式 */
 .login-title {
-  font-size: 28px;
-  color: #333;
+  font-size: 30rpx;
+  color: #000;
   text-align: center;
-  margin-bottom: 40px;
-  font-weight: bold; /* 加粗字体 */
+  margin-bottom: 30rpx;
 }
 
-/* 输入框聚焦效果和过渡动画优化 */
+/* 手机号/用户名和密码输入框的父容器样式 */
+.phoneCs, .passwordCs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+/* 图标样式 */
+.phoneCs .ph, .passwordCs .ps, .passwordCs .eye {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+/* 输入框样式 */
 .input-field {
+  flex-grow: 1;
+  border: none;
+  height: 80rpx;
+  font-size: 28rpx;
+}
+
+/* 登录和注册按钮样式 */
+.login-btn, .denglu button {
+  display: block;
   width: 100%;
-  padding: 15px 20px;
-  margin-bottom: 25px;
-  border: 1px solid transparent; /* 准备聚焦时的边框效果 */
-  border-radius: 10px;
-  font-size: 16px;
-  background-color: #f0f0f0;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out; /* 优化过渡效果 */
-}
-
-.input-field:focus {
-  background-color: #ffffff;
-  border-color: #4481eb; /* 聚焦时边框颜色变化 */
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* 按钮的动态效果和视觉反馈增强 */
-.login-btn, .register-btn {
-  width: 100%;
-  padding: 15px 20px;
-  border-radius: 10px;
-  font-size: 16px;
-  margin-top: 15px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.login-btn {
-  background-image: linear-gradient(45deg, #4481eb 0%, #04befe 100%);
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  border-radius: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: 20rpx;
 }
 
-.login-btn:hover, .register-btn:hover {
-  transform: translateY(-3px); /* 鼠标悬浮时上移效果更明显 */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* 增强阴影效果 */
+/* 注册和忘记密码链接样式 */
+.zhuce {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  margin-top: 20rpx;
 }
 
-.register-btn {
-  background-color: #ffffff;
-  color: #4481eb;
-  border: 1px solid #4481eb;
+/* 协议复选框和文本样式 */
+.xieyi {
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
 }
 
-.register-btn:hover {
-  color: #04befe;
-  border-color: #04befe;
+.xieyi .isXY {
+  margin-right: 10rpx;
 }
+
+.xieyi .text-xy {
+  font-size: 24rpx;
+}
+
+/* 登录方式提示文本和线条样式 */
+.v3, .qwwIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+
+.v3 .line {
+  flex-grow: 1;
+  height: 2rpx;
+  background-color: #fff;
+  margin: 0 20rpx;
+}
+
+.v3 .lText {
+  color: #fff;
+  font-size: 28rpx;
+}
+
+/* 社交媒体图标样式 */
+.qwwIcon image {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 30rpx;
+}
+
+
+.xieyi .isXY {
+  width: 20rpx; /* 设置复选框的宽度 */
+  height: 60rpx; /* 设置复选框的高度 */
+  margin-right: 30rpx; /* 设置复选框和文本之间的间距 */
+  transform: scale(0.5); /* 使用缩放来调整复选框的大小 */
+  transform-origin: center; /* 确保缩放时复选框居中 */
+}
+/* 登录标题样式 */
+.login-title {
+  font-size: 36rpx; /* 增大字体大小 */
+  color: #333; /* 字体颜色深化 */
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+

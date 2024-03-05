@@ -26,7 +26,7 @@ Page({
       header: {
         'Content-Type': 'application/json'
       },
-      url: 'http://43.142.142.224:8000/myapp/wx_AddPurchaseView/',
+      url: 'http://127.0.0.1:8000/myapp/wx_AddPurchaseView/',
 
       data: {
         username: app.globalData.username,
@@ -41,9 +41,10 @@ Page({
             title: '进货信息添加成功',
             icon: 'success'
           });
-          wx.navigateTo({
-            url: '/pages/purchase/purchase'
-          });
+          // wx.navigateTo({
+          //   url: '/pages/purchase/purchase'
+          // });
+          wx.navigateBack()
         } else {
           wx.showToast({
             title: '添加失败',
