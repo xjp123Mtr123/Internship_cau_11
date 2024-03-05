@@ -1,4 +1,8 @@
 <view class="container">
+  <view class="search-bar">
+    <input class="search-input" placeholder="搜索商品名称或类别" bindinput="inputSearch" />
+    <button class="search-btn" bindtap="searchStock">搜索</button>
+  </view>
   <view class="input-group">
     <text>商品名称：</text>
     <input class="input-field" type="text" placeholder="请输入商品名称" bindinput="inputProductName" />

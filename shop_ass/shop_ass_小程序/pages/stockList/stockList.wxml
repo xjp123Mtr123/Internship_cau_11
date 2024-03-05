@@ -8,7 +8,7 @@
           <view class="item-detail">价格：￥{{item.price}}</view>
         </view>
         <view class="item-actions">
-          <button class="edit-btn" bindtap="navigateToUpdateStock" data-id="{{item.id}}">编辑</button>
+          <button class="edit-btn" bindtap="navigateToUpdateStock" data-id="{{item.id}}" data-quantity="{{item.quantity}}" data-price="{{item.price}}">编辑</button>
           <button class="delete-btn" bindtap="deleteStock" data-id="{{item.id}}">删除</button>
         </view>
       </view>

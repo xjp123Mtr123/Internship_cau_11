@@ -6,11 +6,13 @@ Page({
   },
   onLoad: function(options) {
     this.setData({ id: options.id });
+    this.setData({quantity:options.quantity});
+    this.setData({price:options.price});
     this.fetchStockDetail();
   },
   fetchStockDetail: function() {
     wx.request({
-      url: `http://43.142.142.224:8000/myapp/wx_StockDetailView/${this.data.id}/`,
+      url: `http://127.0.0.1:8000/myapp/wx_StockDetailView/${this.data.id}/`,
       success: res => {
         if (res.data.status) {
           this.setData({

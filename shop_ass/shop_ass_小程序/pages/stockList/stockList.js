@@ -26,8 +26,10 @@ Page({
   },
   navigateToUpdateStock: function(e) {
     const id = e.currentTarget.dataset.id;
+    const quantity=e.currentTarget.dataset.quantity;
+    const price=e.currentTarget.dataset.price;
     wx.navigateTo({
-      url: '/pages/updateStock/updateStock?id=' + id
+      url: '/pages/updateStock/updateStock?id=' + id+'&quantity='+quantity+'&price='+price
     });
     
   },
