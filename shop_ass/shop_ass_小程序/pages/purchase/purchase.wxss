@@ -53,7 +53,7 @@
 
 /* 列表项显示优化 */
 .list-item {
-  display: none; /* 默认不显示，通过小程序逻辑显示有内容时才设置为 block */
+  /* display: none; 默认不显示，通过小程序逻辑显示有内容时才设置为 block */
   padding: 10px;
   background-color: #fff;
   border-radius: 10px;

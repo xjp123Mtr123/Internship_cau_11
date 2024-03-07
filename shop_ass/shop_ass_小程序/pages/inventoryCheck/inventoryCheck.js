@@ -8,7 +8,7 @@ Page({
   fetchStocks: function() {
     const app = getApp();
     wx.request({
-      url: 'http://127.0.0.1:8000/myapp/wx_StockListView/',
+      url: 'http://8.146.209.237:8000/myapp/wx_StockListView/',
       data: { 
         username:app.globalData.username
       },

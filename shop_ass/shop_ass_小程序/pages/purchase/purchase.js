@@ -24,7 +24,7 @@ Page({
       header: {
         'Content-Type': 'application/json'
       },
-      url: 'http://127.0.0.1:8000/myapp/wx_SearchStockView/',
+      url: 'http://8.146.209.237:8000/myapp/wx_SearchStockView/',
       header: {
         'Content-Type': 'application/json'
       },
@@ -44,7 +44,7 @@ Page({
       header: {
         'Content-Type': 'application/json'
       },
-      url: 'http://127.0.0.1:8000/myapp/wx_GetStockListView/',
+      url: 'http://8.146.209.237:8000/myapp/wx_GetStockListView/',
       data: { query: '',
               username:app.globalData.username
        },

@@ -10,7 +10,7 @@ Page({
   fetchFinancialData: function () {
     const app = getApp();
     wx.request({
-      url: 'http://127.0.0.1:8000/myapp/wx_GetFinancialRecordView/', // 替换为您的后端API地址
+      url: 'http://8.146.209.237:8000/myapp/wx_GetFinancialRecordView/', // 替换为您的后端API地址
       data: { username: app.globalData.username },
       success: res => {
         if (res.data.status) {

@@ -18,7 +18,7 @@ navigateToRegister: function() {
   // 登录页面的 login 函数
 login: function() {
   wx.request({
-    url: 'http://127.0.0.1:8000/myapp/wx_login/', 
+    url: 'http://8.146.209.237:8000/myapp/wx_login/', 
     data: {
       username: this.data.username,
       password: this.data.password

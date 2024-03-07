@@ -15,7 +15,7 @@ Page({
   loadUserInfo: function() {
 
       wx.request({
-        url: 'http://127.0.0.1:8000/myapp/wx_GetUserInfoView/',
+        url: 'http://8.146.209.237:8000/myapp/wx_GetUserInfoView/',
         data: {
           username: app.globalData.username,
         },
@@ -52,7 +52,7 @@ Page({
   // 其他字段的input函数
   updateUserInfo: function() {
     wx.request({
-      url: 'http://127.0.0.1:8000/myapp/wx_UpdateUserInfoView/',
+      url: 'http://8.146.209.237:8000/myapp/wx_UpdateUserInfoView/',
       data: {
         username: app.globalData.username,
         phone: this.data.phone,
