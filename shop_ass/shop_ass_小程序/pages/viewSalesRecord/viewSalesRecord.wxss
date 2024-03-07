@@ -39,6 +39,8 @@
 
 /* 添加按钮样式 */
 .add-btn {
+  position: fixed;
+  bottom: 10px;
   width: calc(100% - 40px); /* 调整按钮宽度，保持与页面边距一致 */
   background-color: #ff4081; /* 设置醒目的粉红色背景 */
   color: white; /* 文字颜色为白色，确保按钮文字清晰可见 */
