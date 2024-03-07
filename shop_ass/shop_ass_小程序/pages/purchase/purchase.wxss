@@ -7,7 +7,7 @@
   height: 100vh;
   background-color: #f0f4f7;
   padding: 10px;
-  padding-top: 60px; /* 留出顶部搜索栏空间 */
+  padding-top: 30px; /* 留出顶部搜索栏空间 */
   box-sizing: border-box;
 }
 

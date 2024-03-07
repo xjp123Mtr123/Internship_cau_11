@@ -1,13 +1,22 @@
 /* 页面容器样式 */
 .container {
-  padding: 20px; /* 统一容器内边距 */
-  background-color: #f7f7f7; /* 背景颜色统一为浅灰色 */
+
+  
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-/* 搜索栏样式 */
+/* 搜索栏样式，固定在页面顶部 */
 .search-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* 确保搜索栏位于最上层 */
   display: flex;
-  margin-bottom: 20px; /* 保持统一的底部外边距 */
+  padding: 10px; /* 原有的内边距可以保留或调整 */
+  background-color: #f7f7f7; /* 背景颜色，确保与页面背景一致 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果，突出搜索栏 */
 }
 
 /* 搜索输入框美化 */
@@ -30,12 +39,22 @@
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 /* 商品列表样式，确保可以滑动且与底部区域不重叠 */
-.scroll-list {
+
+.list-container{
+  margin-top: 70px; /* 根据搜索栏的高度调整，确保列表内容不被遮挡 */
   flex-grow: 1;
   overflow-y: auto; /* 允许y轴滑动 */
-  margin-bottom: 150px; /* 底部输入区域的高度，防止重叠 */
+  margin-bottom: 400px; /* 底部输入区域的高度，防止重叠 */
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 20px 20px 20px 0px;
+  width: 100%;
+  border-color: yellow;
+  background-color:rgb(207, 240, 142);
+}
+.list-item {
+  border-bottom: 1px solid #f0f0f0; /* A line to separate items, remove if not needed */
 }
 
 /* 商品卡片样式 */
@@ -64,7 +83,7 @@
 
 /* 商品名称和类别值样式 */
 .item-value {
-  color: #666; /* 文本颜色 */
+  color:#666(184, 83, 83); /* 文本颜色 */
 }
 
 /* 输入组样式 */
@@ -82,8 +101,9 @@
 /* 输入字段样式 */
 .input-field {
   width: 100%; /* 输入框占满剩余宽度 */
+  height: auto;
   padding: 10px 15px; /* 输入框内边距 */
-  margin: 10px -10px; /* 输入框上下外边距10px，确保与周围元素的垂直距离 */
+  margin: 5px -10px; /* 输入框上下外边距10px，确保与周围元素的垂直距离 */
   border: none; /* 移除边框 */
   border-radius: 15px; /* 输入框圆角 */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 输入框添加阴影 */
@@ -93,12 +113,13 @@
 /* 提交按钮样式 */
 .submit-btn {
   width: 100%; /* 按钮宽度占满容器 */
-  padding: 12px 0; /* 增大内边距 */
+  padding: 5px 0; /* 增大内边距 */
   border-radius: 15px; /* 按钮圆角 */
   background-color: #ff4081; /* 设定一个醒目的按钮背景色 */
   color: white;
   border: none;
-  margin-top: 20px; /* 顶部外边距 */
+  margin-top: 1px; /* 顶部外边距 */
+  margin-top: 1px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加较大的按钮阴影 */
   transition: background-color 0.3s; /* 背景颜色变化过渡效果 */
 }
@@ -111,17 +132,14 @@
   overflow: hidden; /* Ensures no content leaks outside the border */
 }
 
-.list-item {
-  border-bottom: 1px solid #f0f0f0; /* A line to separate items, remove if not needed */
-}
-
 /* 底部容器样式，固定距离页面底部 */
 .bottom-container {
+  z-index: 10; /* 足够高以确保它位于内容之上 */
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px;
+  padding: 10px;
   background-color: #f7f7f7;
 }
 

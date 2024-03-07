@@ -4,6 +4,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/addSalesRecord/addSalesRecord",
+          "pathName": "pages/addSalesRecord/addSalesRecord",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/financialReport/financialReport",
           "pathName": "pages/financialReport/financialReport",
           "query": "",
@@ -13,13 +20,6 @@
         {
           "name": "pages/inventoryCheck/inventoryCheck",
           "pathName": "pages/inventoryCheck/inventoryCheck",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/index/index",
           "query": "",
           "launchMode": "default",
           "scene": null
