@@ -1,4 +1,6 @@
 <view class="container">
+  <view>总金额：{{totalMoney}}</view> 
+  <view>总销售额：{{totalSaleMoney}}</view> 
   <view class="list-container">
     <block wx:for="{{financialRecords}}" wx:key="index">
       <view class="record-item">

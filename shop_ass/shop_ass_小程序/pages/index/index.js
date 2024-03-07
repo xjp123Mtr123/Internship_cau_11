@@ -13,8 +13,8 @@ Page({
    */
   onLoad(options) {
 // 任意页面
-const app = getApp();
-console.log(app.globalData.username); // 访问全局变量
+// const app = getApp();
+// console.log(app.globalData.username); // 访问全局变量
 
   },
 

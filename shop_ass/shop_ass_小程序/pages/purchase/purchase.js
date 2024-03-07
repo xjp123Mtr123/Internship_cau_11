@@ -59,8 +59,9 @@ Page({
     const productName = e.currentTarget.dataset.product_name;
     const category=e.currentTarget.dataset.category;
     const price=e.currentTarget.dataset.price;
+    const warnNum=e.currentTarget.dataset.warn_num;
     wx.navigateTo({
-      url: '/pages/addPurchase/addPurchase?productName=' + productName+'&category='+category+'&price='+price
+      url: '/pages/addPurchase/addPurchase?status=true&productName=' + productName+'&category='+category+'&price='+price+'&warnNum='+warnNum
     });
   },
   navigateToAddPurchase: function() {

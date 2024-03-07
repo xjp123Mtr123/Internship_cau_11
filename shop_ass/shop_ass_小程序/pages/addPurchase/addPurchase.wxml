@@ -1,9 +1,10 @@
 <view class="container">
   <view class="form-group">
-    <input class="input-field" bindinput="inputProductName" value="{{productName}}" placeholder="商品名称" />
-    <input class="input-field" bindinput="inputCategory" value="{{category}}" placeholder="商品类别" />
-    <input class="input-field" bindinput="inputQuantity" placeholder="商品数量" type="number" />
-    <input class="input-field" bindinput="inputPrice" value="{{price}}" placeholder="商品价格" type="number" />
+    商品名称<input class="input-field" bindinput="inputProductName" value="{{productName}}" placeholder="商品名称" />
+    商品类别<input class="input-field" bindinput="inputCategory" value="{{category}}" placeholder="商品类别" />
+    商品数量<input class="input-field" bindinput="inputQuantity" placeholder="商品数量" type="number" />
+    商品价格<input class="input-field" bindinput="inputPrice" value="{{price}}" placeholder="商品价格" type="number" />
+    需被提醒的商品数量<input class="input-field" bindinput="inputWarnNum"  value="{{warnNum}}" placeholder="需被提醒的商品数量" type="number"/>
     <button class="submit-btn" bindtap="submitPurchase">提交进货信息</button>
   </view>
 </view>

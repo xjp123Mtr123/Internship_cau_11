@@ -1,6 +1,8 @@
 Page({
   data: {
-    financialRecords: []
+    financialRecords: [],
+    totalMoney:0,
+    totalSaleMoney:0
   },
   onShow: function() {
     this.fetchFinancialRecords();
@@ -13,6 +15,8 @@ Page({
       success: res => {
         if (res.data.status) {
           this.setData({ financialRecords: res.data.financial_records });
+          this.setData({totalMoney: res.data.totalMoney});
+          this.setData({totalSaleMoney: res.data.totalSaleMoney});
         }
       }
     });

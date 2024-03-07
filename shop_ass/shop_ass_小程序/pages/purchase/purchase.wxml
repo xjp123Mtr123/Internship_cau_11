@@ -5,7 +5,7 @@
   </view>
   <view class="list-container">
     <block wx:for="{{stockList}}" wx:key="index" >
-      <view class="list-item" bind:tap="navigateToAddSamePurchase"  data-product_name="{{item.product_name}}" data-category="{{item.category}}" data-price="{{item.price}}">
+      <view class="list-item" bind:tap="navigateToAddSamePurchase"  data-product_name="{{item.product_name}}" data-category="{{item.category}}" data-price="{{item.price}}" data-warn_num="{{item.warn_num}}">
         <view class="item-row">
           <text class="item-label">商品名称：</text>
           <text class="item-value">{{item.product_name}}</text>

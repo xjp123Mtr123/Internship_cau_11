@@ -1,14 +1,22 @@
+const app = getApp();
+
 Page({
   data: {
     productName: '',
     category: '',
     quantity: '',
-    price: ''
+    price: '',
+    warnNum:5,
   },
   onLoad: function(options) {
-    this.setData({ productName: options.productName });
-    this.setData({category:options.category});
-    this.setData({price:options.price});
+    if (options.status)
+    {
+      this.setData({ productName: options.productName });
+      this.setData({category:options.category});
+      this.setData({price:options.price});
+      this.setData({warnNum:options.warnNum});
+    }
+    
   },
   inputProductName: function(e) {
     this.setData({ productName: e.detail.value });
@@ -22,8 +30,11 @@ Page({
   inputPrice: function(e) {
     this.setData({ price: e.detail.value });
   },
+  inputWarnNum: function(e) {
+    this.setData({ warnNum: e.detail.value });
+  },
   submitPurchase: function() {
-    const app = getApp();
+ 
 
     
     wx.request({
@@ -38,7 +49,8 @@ Page({
         productName: this.data.productName,
         category: this.data.category,
         quantity: this.data.quantity,
-        price: this.data.price
+        price: this.data.price,
+        warnNum:this.data.warnNum,
       },
       success: res => {
         if (res.data.status) {
