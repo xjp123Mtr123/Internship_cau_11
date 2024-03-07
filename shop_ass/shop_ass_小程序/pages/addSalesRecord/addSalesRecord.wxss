@@ -33,7 +33,7 @@
 
 /* 输入组样式 */
 .input-group {
-  margin-bottom: 15px; /* 统一底部外边距 */
+  margin-bottom: 10px; /* 统一底部外边距 */
 }
 
 .input-group text {
@@ -46,7 +46,7 @@
 /* 输入字段样式 */
 .input-field {
   width: 100%; /* 输入框占满剩余宽度 */
-  padding: 12px 15px; /* 输入框内边距 */
+  padding: 10px 15px; /* 输入框内边距 */
   margin: 10px -10px; /* 输入框上下外边距10px，确保与周围元素的垂直距离 */
   border: none; /* 移除边框 */
   border-radius: 15px; /* 输入框圆角 */
@@ -65,6 +65,39 @@
   margin-top: 20px; /* 顶部外边距 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加较大的按钮阴影 */
   transition: background-color 0.3s; /* 背景颜色变化过渡效果 */
+}
+.card {
+  padding: 10px;
+  margin-bottom: 15px; /* Space between cards */
+  background-color: #ffffff;
+  border-radius: 8px; /* Rounded corners for the card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensures no content leaks outside the border */
+}
+
+.list-item {
+  border-bottom: 1px solid #f0f0f0; /* A line to separate items, remove if not needed */
+}
+
+/* 底部容器样式，固定距离页面底部 */
+.bottom-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+/* 输入行样式，用于在一行内显示两个输入组 */
+.input-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 输入组样式，使用半宽度显示 */
+.input-group.half-width {
+  width: 48%; /* 设置为小于50%的宽度以适应边距 */
 }
 
 .submit-btn:hover {

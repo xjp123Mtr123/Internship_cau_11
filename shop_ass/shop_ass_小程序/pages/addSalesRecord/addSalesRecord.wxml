@@ -19,21 +19,32 @@
     
     </block>
   </view>
-  <view class="input-group">
-    <text>商品名称：</text>
-    <input class="input-field" type="text" placeholder="请输入商品名称" value="{{productName}}" bindinput="inputProductName" />
+  <view class="bottom-container">
+    <!-- 商品名称和销售数量在一行 -->
+    <view class="input-row">
+      <view class="input-group half-width">
+        <text>商品名称：</text>
+        <input class="input-field" type="text" placeholder="请输入商品名称" value="{{productName}}" bindinput="inputProductName" />
+      </view>
+      <view class="input-group half-width">
+        <text>销售数量：</text>
+        <input class="input-field" type="number" value="{{quantity}}" placeholder="请输入销售数量" bindinput="inputQuantity" />
+      </view>
+    </view>
+
+    <!-- 售价和成本价在一行 -->
+    <view class="input-row">
+      <view class="input-group half-width">
+        <text>售价：</text>
+        <input class="input-field" type="number" placeholder="请输入售价" bindinput="inputSalePrice" />
+      </view>
+      <view class="input-group half-width">
+        <text>成本价：</text>
+        <input class="input-field" type="number" placeholder="请输入成本价" value="{{costPrice}}" bindinput="inputCostPrice" />
+      </view>
+    </view>
+
+    <!-- 添加销售记录按钮 -->
+    <button class="submit-btn" bindtap="addSalesRecord">添加销售记录</button>
   </view>
-  <view class="input-group">
-    <text>销售数量：</text>
-    <input class="input-field" type="number" value="{{quantity}}" placeholder="请输入销售数量" bindinput="inputQuantity" />
-  </view>
-  <view class="input-group">
-    <text>售价：</text>
-    <input class="input-field" type="number" placeholder="请输入售价" bindinput="inputSalePrice" />
-  </view>
-  <view class="input-group">
-    <text>成本价：</text>
-    <input class="input-field" type="number" placeholder="请输入成本价" value="{{costPrice}}" bindinput="inputCostPrice" />
-  </view>
-  <button class="submit-btn" bindtap="addSalesRecord">添加销售记录</button>
 </view>
