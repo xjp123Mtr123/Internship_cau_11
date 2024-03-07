@@ -1,54 +1,65 @@
+/* 页面容器样式 */
 .container {
-  padding: 10px;
-  background-color: #f5f5f5;
+  padding: 20px; /* 统一的内边距提供足够的空间 */
+  background-color: #f7f7f7; /* 设置浅灰色背景，以匹配整体设计 */
 }
 
+/* 列表容器样式 */
 .list-container {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* 设置列表与页面其他元素的底部间距 */
 }
 
+/* 库存项样式 */
 .stock-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between; /* 内容两端对齐 */
+  align-items: center; /* 垂直居中 */
+  background-color: #fff; /* 白色背景色 */
+  padding: 12px 15px; /* 更大的内边距提升可读性和触感 */
+  margin-bottom: 10px; /* 库存项之间的间距 */
+  border-radius: 15px; /* 更大的圆角半径 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 细微阴影增添深度 */
 }
 
+/* 项目信息样式 */
 .item-info {
-  flex-grow: 1;
+  flex-grow: 1; /* 占据所有可用空间 */
 }
 
+/* 项目标题样式 */
 .item-title {
   font-size: 16px;
-  font-weight: bold;
-  color: #333;
+  font-weight: bold; /* 加粗字体突出标题 */
+  color: #333; /* 深色字体提升可读性 */
 }
 
+/* 项目细节样式 */
 .item-detail {
-  color: #666;
-  font-size: 14px;
+  color: #666; /* 灰色字体颜色 */
+  font-size: 14px; /* 字体大小适中，保持信息清晰 */
 }
 
+/* 行动项容器样式 */
 .item-actions {
-  display: flex;
+  display: flex; /* 行动按钮水平排列 */
 }
 
-.edit-btn, .delete-btn {
-  margin-left: 10px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  color: white;
-}
-
+/* 编辑按钮样式 */
 .edit-btn {
-  background-color: #4CAF50;
+  background-color: #4CAF50; /* 绿色背景表示编辑 */
+  color: white; /* 白色字体提升对比度 */
+  padding: 8px 12px; /* 增加内边距，使按钮更易点击 */
+  border-radius: 20px; /* 圆角半径更大 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 给按钮增添阴影 */
+  margin-left: 10px; /* 与其他按钮分开 */
 }
 
+/* 删除按钮样式 */
 .delete-btn {
-  background-color: #F44336;
+  background-color: #F44336; /* 红色背景表示危险操作 */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 10px; /* 保持一致的间隔 */
 }

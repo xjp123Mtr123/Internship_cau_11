@@ -1,41 +1,77 @@
+/* 页面容器样式，增加现代感同时便于阅读 */
 .container {
-  padding: 10px;
-  background-color: #f5f5f5;
+  padding: 20px; /* 内边距统一增加 */
+  background-color: #f7f7f7; /* 背景颜色保持一致性，使用更加柔和的灰色 */
+  font-family: 'Arial', sans-serif; /* 设置字体样式为更加现代的字体 */
+  color: #333; /* 主文字颜色统一为深灰色 */
 }
 
+/* 总金额和销售额的样式，突出显示重要信息 */
+.container view:first-child,
+.container view:nth-child(2) {
+  font-size: 18px; /* 字体大小增加，以突出显示 */
+  font-weight: bold; /* 字体加粗，增加重要性 */
+  padding: 8px 0; /* 上下内边距增加 */
+  border-bottom: 1px solid #ddd; /* 底部边框，用以区分 */
+  margin-bottom: 20px; /* 下外边距增加 */
+}
+
+/* 财务记录列表容器样式 */
 .list-container {
-  margin-bottom: 20px;
+  margin-bottom: 70px; /* 底部外边距增加，为添加按钮留出空间 */
+  overflow-y: auto; /* 添加滚动条以浏览长列表 */
 }
 
+/* 单条财务记录样式，美化每条记录 */
 .record-item {
   background-color: #fff;
-  padding: 10px;
+  padding: 15px; /* 增加内边距，使得每条记录更具空间感 */
   margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* 增加圆角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 统一记录项的阴影效果 */
+  transition: box-shadow 0.3s; /* 添加阴影变化效果，增强交互感 */
 }
 
+.record-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 鼠标悬浮时增加阴影效果 */
+}
+
+/* 记录项内部分区样式，增加对齐和间距 */
 .item-section {
   display: flex;
+  align-items: center; /* 垂直居中对齐 */
   margin-bottom: 5px;
 }
 
+/* 记录项标签样式 */
 .item-label {
   color: #888;
-  width: 100px;
+  width: 100px; /* 宽度保持一致 */
+  font-weight: bold; /* 字体加粗，标签更突出 */
 }
 
+/* 记录项内容样式 */
 .item-content {
   color: #333;
-  flex-grow: 1;
+  flex-grow: 1; /* 内容占据剩余空间 */
 }
 
+/* 添加财务记录按钮样式，与页面其它按钮样式保持一致 */
 .add-btn {
-  width: 100%;
-  background-color: #1e88e5;
+  position: fixed; /* 固定位置，始终在屏幕底部 */
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  width: auto; /* 自适应容器宽度 */
+  background-color: #ff4081; /* 按钮颜色更鲜艳，吸引操作 */
   color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  margin-top: 20px;
+  padding: 12px; /* 增加内边距，使按钮更易点击 */
+  border-radius: 20px; /* 增加圆角，现代风格 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
+  transition: background-color 0.3s; /* 背景颜色变化效果 */
+}
+
+.add-btn:hover {
+  background-color: #e91e63; /* 鼠标悬浮时背景色变化 */
+  cursor: pointer; /* 鼠标悬浮时变为手形 */
 }

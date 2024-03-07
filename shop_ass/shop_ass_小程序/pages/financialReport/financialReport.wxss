@@ -1,18 +1,32 @@
+/* 页面容器样式 */
 .container {
-  padding: 10px;
+  padding: 20px; /* 增加内边距，保证内容与边缘的间距一致 */
+  background-color: #f7f7f7; /* 设置浅灰色背景 */
 }
 
+/* 报告容器样式 */
 .report-container {
-  margin-top: 10px;
+  margin-top: 20px; /* 增加顶部外边距 */
 }
 
+/* 记录项样式 */
 .record-item {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 10px;
+  padding: 12px 15px; /* 增加内边距，改善内容显示 */
+  background-color: #fff; /* 设置背景颜色为白色，保持清新风格 */
+  border-radius: 15px; /* 设置边框圆角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影，增加立体感 */
+  margin-bottom: 10px; /* 设置记录项之间的底部外边距 */
 }
 
+/* 记录项文本样式 */
 .record-item text {
-  display: block; /* 每项内容独占一行 */
-  margin-bottom: 5px;
+  display: block; /* 设置为块级元素，使其独占一行 */
+  margin-bottom: 5px; /* 设置文本之间的间距 */
+  color: #333; /* 设置文字颜色为深灰色，增加易读性 */
+  font-size: 14px; /* 设置字体大小 */
+}
+
+/* 最后一项记录项样式 */
+.record-item:last-child {
+  border-bottom: none; /* 移除最后一项的底部边框 */
 }

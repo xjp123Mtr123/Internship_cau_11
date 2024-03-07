@@ -1,31 +1,46 @@
+/* 页面容器样式 */
 .container {
-  padding: 10px;
-  background-color: #f5f5f5;
+  padding: 20px; /* 统一的内边距，与整体风格保持一致 */
+  background-color: #f7f7f7; /* 浅灰色背景，干净现代 */
 }
 
+/* 列表容器样式 */
 .list-container {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* 底部外边距，保持内容间距 */
 }
 
+/* 库存项样式 */
 .stock-item {
-  background-color: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* 白色背景 */
+  padding: 12px 15px; /* 增加内边距 */
+  margin-bottom: 10px; /* 列表项间距 */
+  border-radius: 15px; /* 圆角边框 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 轻微阴影，增加立体效果 */
+  transition: background-color 0.3s; /* 背景颜色过渡效果 */
 }
 
+/* 当库存数量低于警告数量时的库存项样式 */
+.stock-item[style*="background-color: #ffcccc;"] {
+  background-color: #ffcccc; /* 警告颜色 */
+}
+
+/* 库存信息样式 */
 .item-info {
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column; /* 使得标题和详情垂直排列 */
 }
 
+/* 库存标题样式 */
 .item-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
+  font-size: 16px; /* 标题字体大小 */
+  font-weight: bold; /* 标题字体加粗 */
+  color: #333; /* 深色字体，突出显示 */
+  margin-bottom: 5px; /* 与详情间距 */
 }
 
+/* 库存详情样式 */
 .item-detail {
-  color: #666;
-  font-size: 14px;
+  color: #666; /* 字体颜色 */
+  font-size: 14px; /* 详情字体大小 */
+  margin-bottom: 3px; /* 详情之间的间距 */
 }

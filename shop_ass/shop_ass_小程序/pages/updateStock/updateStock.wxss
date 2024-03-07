@@ -1,33 +1,55 @@
+/* 页面容器样式 */
 .container {
-  padding: 20px;
+  padding: 20px; /* 增加内边距，使内容与边缘保持一致的间距 */
+  background-color: #f7f7f7; /* 设定整体页面背景颜色为浅灰色 */
 }
 
+/* 表单组容器样式 */
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* 设置表单组与其他内容的底部间距 */
 }
 
+/* 输入组样式 */
 .input-group {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  align-items: center; /* 垂直居中对齐输入框和标签 */
+  margin-bottom: 15px; /* 设置输入组的底部间距 */
 }
 
+/* 输入组内的文本标签样式 */
 .input-group text {
-  width: 60px;
+  width: 80px; /* 设置文本标签宽度 */
+  margin-right: 10px; /* 设置标签和输入框之间的间距 */
+  font-size: 16px; /* 设置字体大小，保持可读性 */
+  color: #333; /* 设置标签的文字颜色为深灰色 */
+  font-weight: bold; /* 设置文本加粗，突出标签 */
 }
 
+/* 输入组内的输入框样式 */
 .input-group input {
-  flex-grow: 1;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  flex-grow: 1; /* 输入框占据剩余空间 */
+  padding: 12px 15px; /* 设置内边距，提高填写舒适度 */
+  border: none; /* 移除边框 */
+  border-radius: 15px; /* 设置圆角，使设计更加现代化 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 输入框添加轻微的阴影 */
+  font-size: 14px; /* 设定合适的字体大小 */
+  margin-right: 10px; /* 与旁边的元素保持一定距离 */
 }
 
+/* 提交按钮样式 */
 .submit-btn {
-  width: 100%;
-  background-color: #1e88e5;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
+  width: calc(100% - 20px); /* 按钮宽度为容器宽度减去两边内边距 */
+  padding: 12px 0; /* 增加垂直内边距 */
+  background-color: #ff4081; /* 设置按钮背景颜色，以便突出 */
+  color: white; /* 按钮文字颜色为白色，保持清晰度 */
+  border: none; /* 移除边框 */
+  border-radius: 20px; /* 设置按钮圆角 */
+  margin-top: 10px; /* 顶部间距 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 为按钮添加阴影 */
+  transition: background-color 0.3s; /* 背景颜色变化过渡效果 */
+}
+
+.submit-btn:hover {
+  background-color: #e91e63; /* 鼠标悬浮时的按钮背景颜色 */
+  cursor: pointer; /* 鼠标悬浮时变为手形图标 */
 }

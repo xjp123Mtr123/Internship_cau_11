@@ -1,31 +1,46 @@
+/* 页面容器样式 */
 .container {
-  padding: 20px;
-  background-color: #f5f5f5;
+  padding: 20px; /* 容器内边距设定为20px，保证内容与边缘的间距一致 */
+  background-color: #f7f7f7; /* 设置浅灰色背景，打造干净、现代的外观 */
 }
 
+/* 输入组样式 */
 .input-group {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* 设置每个输入组的底部外边距，保持内容分隔开来 */
 }
 
+/* 标签样式 */
 .label {
   display: block;
   margin-bottom: 5px;
-  color: #333;
+  color: #333; /* 字体颜色深灰，保持清晰可读 */
 }
 
+/* 输入框样式 */
 .input-field {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 100%; /* 输入框宽度填满容器 */
+  padding: 12px 15px; /* 增加内边距，提高输入舒适度 */
+  margin: 10px -10px; /* 输入框上下外边距10px，确保与周围元素的垂直距离 */
+  border: none; /* 移除边框 */
+  border-radius: 15px; /* 设置圆角边框，更加现代和友好 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 输入框添加阴影，提升层次感 */
+  background-color: #fff; /* 白色背景 */
 }
 
+/* 提交按钮样式 */
 .submit-btn {
-  width: 100%;
-  background-color: #1e88e5;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  margin-top: 20px;
+  width: 100%; /* 按钮宽度填满容器 */
+  background-color: #1e88e5; /* 设定按钮背景颜色 */
+  color: white; /* 设定按钮文字颜色为白色 */
+  padding: 12px 15px; /* 增加内边距，提高点击舒适度 */
+  border: none; /* 移除边框 */
+  border-radius: 15px; /* 设定按钮圆角边框，与输入框保持一致 */
+  margin-top: 20px; /* 顶部外边距，与输入组保持一致 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加按钮阴影，提升视觉效果 */
+  transition: background-color 0.3s; /* 背景颜色变化过渡效果 */
+}
+
+.submit-btn:hover {
+  background-color: #0a6ebd; /* 鼠标悬浮时，按钮背景颜色变为更深的蓝色 */
+  cursor: pointer; /* 鼠标悬浮时变为手形图标，增强用户交互体验 */
 }

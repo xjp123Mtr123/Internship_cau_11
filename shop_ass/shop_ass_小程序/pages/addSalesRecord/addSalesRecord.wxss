@@ -1,47 +1,73 @@
+/* 页面容器样式 */
 .container {
-  padding: 20px;
+  padding: 20px; /* 统一容器内边距 */
+  background-color: #f7f7f7; /* 背景颜色统一为浅灰色 */
 }
+
+/* 搜索栏样式 */
 .search-bar {
   display: flex;
-  margin-bottom: 20px;
-}
-search-input {
-  flex-grow: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  margin-bottom: 20px; /* 保持统一的底部外边距 */
 }
 
+/* 搜索输入框美化 */
+.search-input {
+  flex-grow: 1;
+  padding: 15px 15px; /* 增加内边距，更符合现代设计 */
+  border: none; /* 移除边框 */
+  border-radius: 15px; /* 圆角设置更大 */
+  margin-right: 10px;
+  background-color: #fff; /* 背景设置为白色 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+/* 搜索按钮美化 */
 .search-btn {
-  width: 80px;
-  margin-left: 10px;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 15px;
   background-color: #1e88e5;
   color: white;
-  border: none;
-  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* 输入组样式 */
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* 统一底部外边距 */
 }
 
 .input-group text {
-  display: inline-block;
-  width: 80px;
+  display: block; /* 将文本标签设置为块级元素 */
+  margin-bottom: 5px; /* 为文本标签添加底部外边距 */
+  color: #333; /* 文本颜色设为深灰色 */
+  font-weight: bold; /* 增加字体粗细 */
 }
 
+/* 输入字段样式 */
 .input-field {
-  width: calc(100% - 90px);
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 100%; /* 输入框占满剩余宽度 */
+  padding: 12px 15px; /* 输入框内边距 */
+  margin: 10px -10px; /* 输入框上下外边距10px，确保与周围元素的垂直距离 */
+  border: none; /* 移除边框 */
+  border-radius: 15px; /* 输入框圆角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 输入框添加阴影 */
+  background-color: #fff; /* 背景颜色为白 */
 }
 
+/* 提交按钮样式 */
 .submit-btn {
-  width: 100%;
-  background-color: #1e88e5;
+  width: 100%; /* 按钮宽度占满容器 */
+  padding: 12px 0; /* 增大内边距 */
+  border-radius: 15px; /* 按钮圆角 */
+  background-color: #ff4081; /* 设定一个醒目的按钮背景色 */
   color: white;
-  padding: 10px;
   border: none;
-  border-radius: 4px;
+  margin-top: 20px; /* 顶部外边距 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加较大的按钮阴影 */
+  transition: background-color 0.3s; /* 背景颜色变化过渡效果 */
+}
+
+.submit-btn:hover {
+  background-color: #e91e63; /* 鼠标悬浮时背景色变化 */
+  cursor: pointer; /* 鼠标悬浮时变为手形图标 */
 }

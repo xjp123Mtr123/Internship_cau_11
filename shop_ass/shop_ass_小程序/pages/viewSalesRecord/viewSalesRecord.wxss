@@ -1,41 +1,49 @@
+/* 页面容器样式 */
 .container {
-  padding: 10px;
-  background-color: #f5f5f5;
+  padding: 20px; /* 增加内边距，提供更多空间和清晰的布局 */
+  background-color: #f7f7f7; /* 设置统一的浅灰色背景，与之前的设计风格保持一致 */
 }
 
+/* 列表容器样式 */
 .list-container {
-  margin-bottom: 20px;
+  margin-bottom: 70px; /* 增加底部外边距，留出添加按钮的空间 */
 }
 
+/* 销售记录项样式 */
 .record-item {
-  background-color: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* 设置白色背景，保持界面清新 */
+  padding: 12px 15px; /* 增加内边距，提升内容的呈现 */
+  margin-bottom: 10px; /* 设置项间距，保持清晰的分隔 */
+  border-radius: 15px; /* 增加圆角，提升现代感和友好度 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影，增加深度和层次感 */
 }
 
+/* 项目信息部分样式 */
 .item-section {
   display: flex;
-  margin-bottom: 5px;
+  margin-bottom: 5px; /* 保持信息段落间的间距 */
 }
 
+/* 项目标签样式 */
 .item-label {
-  color: #888;
-  width: 100px;
+  color: #555; /* 加深标签文字颜色，增强可读性 */
+  width: 100px; /* 统一标签宽度 */
+  font-weight: bold; /* 加粗标签文字，提升信息的层次感 */
 }
 
+/* 项目内容样式 */
 .item-content {
-  color: #333;
-  flex-grow: 1;
+  color: #333; /* 加深内容文字颜色，确保信息清晰可见 */
+  flex-grow: 1; /* 内容占满剩余空间 */
 }
 
+/* 添加按钮样式 */
 .add-btn {
-  width: 100%;
-  background-color: #1e88e5;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  margin-top: 20px;
+  width: calc(100% - 40px); /* 调整按钮宽度，保持与页面边距一致 */
+  background-color: #ff4081; /* 设置醒目的粉红色背景 */
+  color: white; /* 文字颜色为白色，确保按钮文字清晰可见 */
+  padding: 12px 0; /* 增加垂直内边距，提升按钮的触感 */
+  border-radius: 20px; /* 增加按钮圆角，提升视觉效果 */
+  margin-top: 20px; /* 顶部外边距，确保与列表容器有足够空间 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加按钮阴影，增加视觉吸引力 */
 }

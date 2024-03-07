@@ -1,59 +1,76 @@
+/* 页面容器 */
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  background-color: #f0f4f7;
   padding: 10px;
+  padding-top: 60px; /* 留出顶部搜索栏空间 */
+  box-sizing: border-box;
 }
 
+/* 固定顶部的搜索条 */
 .search-bar {
   display: flex;
-  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #f0f4f7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
+/* 搜索输入框美化 */
 .search-input {
   flex-grow: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 15px 15px; /* 增加内边距，更符合现代设计 */
+  border: none; /* 移除边框 */
+  border-radius: 15px; /* 圆角设置更大 */
+  margin-right: 10px;
+  background-color: #fff; /* 背景设置为白色 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
 }
 
+/* 搜索按钮美化 */
 .search-btn {
-  width: 80px;
-  margin-left: 10px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 15px;
   background-color: #1e88e5;
   color: white;
-  border: none;
-  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* 商品列表容器优化 */
 .list-container {
-  margin-bottom: 20px;
-}
-
-.list-item {
-  padding: 10px;
-  border: 1px solid #eee;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.item-row {
-  display: flex;
-  margin-bottom: 5px;
-}
-
-.item-label {
-  color: #888;
-  width: 100px;
-}
-
-.item-value {
-  color: #333;
-  flex-grow: 1;
-}
-
-.add-btn {
   width: 100%;
+  margin-bottom: 70px; /* 留出底部按钮空间 */
+  overflow-y: auto; /* 超出内容垂直滚动 */
+}
+
+/* 列表项显示优化 */
+.list-item {
+  display: none; /* 默认不显示，通过小程序逻辑显示有内容时才设置为 block */
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 固定底部的添加按钮 */
+.add-btn {
+  position: fixed;
+  bottom: 10px;
+  width: calc(100% - 20px);
+  padding: 12px;
   background-color: #ff4081;
   color: white;
-  padding: 10px;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
