@@ -31,6 +31,42 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* 商品列表样式，确保可以滑动且与底部区域不重叠 */
+.scroll-list {
+  flex-grow: 1;
+  overflow-y: auto; /* 允许y轴滑动 */
+  margin-bottom: 150px; /* 底部输入区域的高度，防止重叠 */
+}
+
+/* 商品卡片样式 */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px; /* 圆角效果 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  margin-bottom: 10px; /* 卡片之间的间距 */
+  padding: 15px; /* 卡片内边距 */
+  box-sizing: border-box; /* 确保padding不会影响宽度计算 */
+}
+
+/* 商品名称和类别行样式 */
+.item-row {
+  display: flex;
+  justify-content: space-between; /* 确保标签和内容分开 */
+  align-items: center; /* 垂直居中 */
+  margin-bottom: 5px; /* 行与行之间的间距 */
+}
+
+/* 商品名称和类别标签样式 */
+.item-label {
+  color: #333; /* 文本颜色 */
+  font-weight: bold; /* 字体加粗 */
+}
+
+/* 商品名称和类别值样式 */
+.item-value {
+  color: #666; /* 文本颜色 */
+}
+
 /* 输入组样式 */
 .input-group {
   margin-bottom: 10px; /* 统一底部外边距 */
@@ -103,4 +139,14 @@
 .submit-btn:hover {
   background-color: #e91e63; /* 鼠标悬浮时背景色变化 */
   cursor: pointer; /* 鼠标悬浮时变为手形图标 */
+}
+/* 适应移动设备屏幕 */
+@media screen and (max-width: 400px) {
+  .input-group {
+    /* 可能需要调整宽度和外边距以适应小屏幕 */
+  }
+
+  .input-row {
+    /* 对小屏幕做出布局调整 */
+  }
 }

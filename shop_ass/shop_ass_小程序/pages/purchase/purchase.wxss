@@ -47,6 +47,7 @@
 /* 商品列表容器优化 */
 .list-container {
   width: 100%;
+  margin-top: 60px;
   margin-bottom: 70px; /* 留出底部按钮空间 */
   overflow-y: auto; /* 超出内容垂直滚动 */
 }
