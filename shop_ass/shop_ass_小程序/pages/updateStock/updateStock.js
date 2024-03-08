@@ -12,7 +12,7 @@ Page({
   },
   fetchStockDetail: function() {
     wx.request({
-      url: `http://8.146.209.237:8000/myapp/wx_StockDetailView/${this.data.id}/`,
+      url: `http://'+app.globalData.ip+'/myapp/wx_StockDetailView/${this.data.id}/`,
       success: res => {
         if (res.data.status) {
           this.setData({
@@ -33,7 +33,7 @@ Page({
     const app = getApp();
     console.log(app.globalData.username); // 访问全局变量
     wx.request({
-      url: `http://8.146.209.237:8000/myapp/wx_UpdateStockView/?quantity=${this.data.quantity}&price=${this.data.price}`,
+      url: `http://'+app.globalData.ip+'/myapp/wx_UpdateStockView/?quantity=${this.data.quantity}&price=${this.data.price}`,
       data: { pk: this.data.id ,
               username:app.globalData.username
       },
@@ -62,7 +62,7 @@ Page({
 //   },
 //   fetchStockDetail: function() {
 //     wx.request({
-//       url: `http://8.146.209.237:8000/stock/${this.data.id}/`,
+//       url: `http://'+app.globalData.ip+'/stock/${this.data.id}/`,
 //       success: res => {
 //         if (res.data.status) {
 //           this.setData({

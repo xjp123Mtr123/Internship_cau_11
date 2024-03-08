@@ -42,7 +42,7 @@ Page({
       header: {
         'Content-Type': 'application/json'
       },
-      url: 'http://8.146.209.237:8000/myapp/wx_AddPurchaseView/',
+      url: 'http://'+app.globalData.ip+'/myapp/wx_AddPurchaseView/',
 
       data: {
         username: app.globalData.username,

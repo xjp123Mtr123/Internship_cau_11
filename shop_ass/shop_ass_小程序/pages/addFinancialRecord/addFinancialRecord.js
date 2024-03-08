@@ -12,7 +12,7 @@ Page({
   addFinancialRecord: function() {
     const app = getApp();
     wx.request({
-      url: 'http://8.146.209.237:8000/myapp/wx_AddFinancialRecordView/',
+      url: 'http://'+app.globalData.ip+'/myapp/wx_AddFinancialRecordView/',
       data: {
         username: app.globalData.username,
         item_name: this.data.itemName,

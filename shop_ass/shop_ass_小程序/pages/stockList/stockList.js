@@ -13,7 +13,7 @@ Page({
   fetchStocks: function() {
     const app = getApp();
     wx.request({
-      url: 'http://8.146.209.237:8000/myapp/wx_StockListView/',
+      url: 'http://'+app.globalData.ip+'/myapp/wx_StockListView/',
       data: { 
         username:app.globalData.username
       },
@@ -37,7 +37,7 @@ Page({
     const app = getApp();
     const id = e.currentTarget.dataset.id;
     wx.request({
-      url: `http://8.146.209.237:8000/myapp/wx_DeleteStockView/`,
+      url: 'http://'+app.globalData.ip+'/myapp/wx_DeleteStockView/',
       data: { pk: id ,
         username:app.globalData.username
 },
