@@ -75,3 +75,21 @@
   background-color: #e91e63; /* 鼠标悬浮时背景色变化 */
   cursor: pointer; /* 鼠标悬浮时变为手形 */
 }
+/*时间选择*/
+.font30{
+  font-size: 30rpx;
+}
+
+.color3{
+  color: #333;
+}
+
+.color6{
+  color: #666;
+}
+
+.timeIcon{
+  color:#666;
+  font-size:18rpx;
+  margin-left: 5rpx;
+}

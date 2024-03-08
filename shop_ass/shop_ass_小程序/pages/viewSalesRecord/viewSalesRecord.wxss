@@ -49,3 +49,22 @@
   margin-top: 20px; /* 顶部外边距，确保与列表容器有足够空间 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加按钮阴影，增加视觉吸引力 */
 }
+
+.font30{
+  font-size: 30rpx;
+}
+
+.color3{
+  color: #333;
+}
+
+.color6{
+  color: #666;
+}
+
+.timeIcon{
+  color:#666;
+  font-size:18rpx;
+  margin-left: 5rpx;
+}
+

@@ -1,4 +1,11 @@
 <view class="container">
+  <picker mode="date" header-text="选择时间"  value="{{date}}" bindchange="bindDateChange">
+  <view class="font30">
+    <text class="color3">选择时间：</text>
+    <text class="color6">{{date}}</text>
+    <text class="timeIcon">▼</text>
+  </view>
+</picker>
   <view class="list-container">
     <block wx:for="{{salesRecords}}" wx:key="index">
       <view class="record-item">
