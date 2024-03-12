@@ -85,15 +85,16 @@
 .xieyi {
   display: flex;
   align-items: center;
-  margin-top: 30rpx;
+  margin-top: 50rpx;
 }
 
 .xieyi .isXY {
-  margin-right: 10rpx;
+  /*margin-right: 10rpx;*/
 }
 
 .xieyi .text-xy {
-  font-size: 24rpx;
+  font-size: 26rpx;
+  font-weight: 800;
 }
 
 /* 登录方式提示文本和线条样式 */

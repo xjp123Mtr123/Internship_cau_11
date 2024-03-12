@@ -30,10 +30,11 @@
   </view>
  
   <!-- 协议区 -->
-  <view class="xieyi">
-    <checkbox class="isXY"   model:checked="{{isChecked}}"></checkbox>
-    <view class="text-xy"><navigator url="/pages/agreement/agreement">我已阅读并同意《用户服务协议》</navigator>及<navigator url="/pages/privacy/privacy">《隐私政策》</navigator></view>
-  </view>
+<view class="xieyi">
+  <checkbox class="isXY" model:checked="{{isChecked}}" style="vertical-align: middle;"></checkbox>
+  <view class="text-xy" style="color:black;"><navigator url="/pages/agreement/agreement">我已阅读并同意《用户服务协议》</navigator><navigator url="/pages/privacy/privacy">及《隐私政策》</navigator></view>
+</view>
+
   
   <!-- 提示框  使用以下方式登录 -->
   <!-- <view class="v3">

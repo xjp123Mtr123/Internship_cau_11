@@ -3,7 +3,13 @@
   padding: 20px; /* 增加内边距，提供更多空间和清晰的布局 */
   background-color: #f7f7f7; /* 设置统一的浅灰色背景，与之前的设计风格保持一致 */
 }
-
+.container view:nth-child(1) {
+  font-size: 18px; /* 字体大小增加，以突出显示 */
+  font-weight: bold; /* 字体加粗，增加重要性 */
+  padding: 8px 0; /* 上下内边距增加 */
+  border-bottom: 1px solid #ddd; /* 底部边框，用以区分 */
+  margin-bottom: 20px; /* 下外边距增加 */
+}
 /* 列表容器样式 */
 .list-container {
   margin-bottom: 70px; /* 增加底部外边距，留出添加按钮的空间 */

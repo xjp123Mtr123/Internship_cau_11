@@ -7,8 +7,8 @@
 }
 
 /* 总金额和销售额的样式，突出显示重要信息 */
-.container view:first-child,
-.container view:nth-child(2) {
+.container view:first-child,.container view:nth-child(2),
+.container view:nth-child(3) {
   font-size: 18px; /* 字体大小增加，以突出显示 */
   font-weight: bold; /* 字体加粗，增加重要性 */
   padding: 8px 0; /* 上下内边距增加 */
