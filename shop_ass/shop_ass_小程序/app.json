@@ -16,7 +16,8 @@
     "pages/addPurchase/addPurchase",
     "pages/stockList/stockList",
     "pages/updateStock/updateStock",
-    "pages/agreement/agreement"
+    "pages/agreement/agreement",
+    "pages/privacy/privacy"
 
   ],
   "window": {
