@@ -1,3 +1,4 @@
+const app = getApp();
 Page({
   data: {
     stocks: [],
@@ -11,7 +12,7 @@ Page({
     this.fetchStocks(); // 重新加载库存
   },
   fetchStocks: function() {
-    const app = getApp();
+    
     wx.request({
       url: 'http://'+app.globalData.ip+'/myapp/wx_StockListView/',
       data: { 
@@ -34,7 +35,7 @@ Page({
     
   },
   deleteStock: function(e) {
-    const app = getApp();
+    
     const id = e.currentTarget.dataset.id;
     wx.request({
       url: 'http://'+app.globalData.ip+'/myapp/wx_DeleteStockView/',

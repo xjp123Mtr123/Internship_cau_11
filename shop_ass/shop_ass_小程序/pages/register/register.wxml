@@ -34,7 +34,7 @@
 
     <!-- 登录链接 -->
     <view class="login-link">
-      <navigator>已有账户？登录</navigator>
+      <navigator url= '/pages/login/login'>已有账户？登录</navigator>
     </view>
   </view>
 </view>

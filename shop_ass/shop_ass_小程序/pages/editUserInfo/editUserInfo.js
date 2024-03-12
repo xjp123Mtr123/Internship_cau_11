@@ -65,8 +65,12 @@ Page({
         if (res.data.status) {
           wx.showToast({ title: '信息更新成功' });
           // 可以添加跳转或其他逻辑
-        }else{
-          wx.showToast({ title: '信息更新失败' });
+        }else {
+          wx.showToast({
+            title: '信息更新失败: ' + res.data.message,
+            icon: 'none',
+            duration:2000
+          });
         }
       }
     });

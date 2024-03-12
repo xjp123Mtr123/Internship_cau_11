@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="title">用户协议</view>
+  <scroll-view class="content" scroll-y="true">
+    <view class="agreement">
+      <!-- 用户协议内容 -->
+      <!-- 这里列出用户需要统一的协议信息 -->
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada odio eu augue tristique, at venenatis risus sollicitudin. Duis eget sagittis lectus. Nulla facilisi. Sed id augue convallis, vehicula libero at, aliquet odio. Ut in nisi dictum, efficitur sapien vel, faucibus ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed interdum fermentum purus, nec interdum sapien ullamcorper nec. Donec et ex sed velit consequat malesuada. Duis faucibus erat sit amet massa luctus, ut scelerisque libero fermentum. Nullam auctor sagittis justo, auctor sodales nunc suscipit nec. Morbi vehicula felis magna, in fringilla dui cursus et. Phasellus vel augue pulvinar, dapibus arcu et, mattis neque. Morbi ac diam euismod, hendrerit nisl eu, tincidunt dolor. Proin maximus justo nec felis fermentum, ac luctus lorem vehicula. Nam sagittis interdum velit, eget iaculis enim commodo ac.
+      <view style="height: 20px;"></view> <!-- 用于增加协议内容与底部按钮的距离 -->
+    </view>
+  </scroll-view>
+  <button class="confirm-btn" bindtap="confirmAgreement">同意并继续</button>
+</view>

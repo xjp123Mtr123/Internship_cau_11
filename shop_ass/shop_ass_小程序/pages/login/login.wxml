@@ -7,7 +7,7 @@
     <!-- 手机号/用户名输入框 -->
     <view class="phoneCs">
       <image src="/img/images/user.png" class="ph"></image>
-      <input class='input-field' bindinput='inputUsername' placeholder='请输入手机号/用户名' name='username' type='text'/>
+      <input class='input-field' bindinput='inputUsername' placeholder='请输入用户名' name='username' type='text'/>
     </view>
     
     <!-- 密码输入框 -->
@@ -28,24 +28,24 @@
       <navigator>忘记密码?</navigator>
     </view>
   </view>
-  
+ 
   <!-- 协议区 -->
   <view class="xieyi">
-    <checkbox class="isXY"></checkbox>
-    <view class="text-xy">同意小程序的《使用协议》</view>
+    <checkbox class="isXY"   model:checked="{{isChecked}}"></checkbox>
+    <view class="text-xy"><navigator url="/pages/agreement/agreement">同意小程序的《使用协议》</navigator></view>
   </view>
   
   <!-- 提示框  使用以下方式登录 -->
-  <view class="v3">
+  <!-- <view class="v3">
     <view class="line"></view>
     <view class="lText">以下方式登录还在开发中。。。</view>
     <view class="line"></view>
-  </view>
+  </view> -->
   
   <!-- qq  weixin  weibo 图标展示view -->
-  <view class="qwwIcon">
+  <!-- <view class="qwwIcon">
     <image src="/img/images/weixin.png"></image>
     <image src="/img/images/qq.png"></image>
     <image src="/img/images/weibo.png"></image>
-  </view>
+  </view> -->
 </view>

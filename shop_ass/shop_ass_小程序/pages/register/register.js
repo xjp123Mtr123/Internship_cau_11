@@ -1,3 +1,4 @@
+const app = getApp();
 Page({
   data: {
     name: '',
@@ -41,7 +42,7 @@ Page({
           wx.showToast({
             title: '注册失败: ' + res.data.message,
             icon: 'none',
-            duration:10000
+            duration:2000
           });
         }
       }

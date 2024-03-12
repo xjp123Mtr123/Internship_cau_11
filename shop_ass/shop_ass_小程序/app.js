@@ -2,7 +2,7 @@
 App({
   globalData: {
     username: '',
-  //  ip:'127.0.0.1:8000',
+    //ip:'127.0.0.1:8000',
     ip:'8.146.209.237:8000'
   },
   onLaunch: function () {

@@ -2,8 +2,10 @@ var app =getApp();
 Page({
   data: {
     username: '',
-    password: ''
+    password: '',
+    isChecked:false
   },
+  
   inputUsername: function(e) {
     this.setData({ username: e.detail.value });
   },
@@ -18,36 +20,45 @@ navigateToRegister: function() {
 },
   // 登录页面的 login 函数
 login: function() {
-  wx.request({
-    url: 'http://'+app.globalData.ip+'/myapp/wx_login/', 
-    data: {
-      username: this.data.username,
-      password: this.data.password
-    },
-    success: res => {
-      if (res.data.status) {
-        wx.showToast({
-          title: '登录成功',
-          icon: 'success',
-          duration: 10000
-        });
-
-        // 更新全局变量
-        const app = getApp();
-        app.globalData.username = this.data.username;
-        wx.navigateTo({
-          url: '/pages/index/index'
-        });
-        // 进行其他操作，例如页面跳转
-      } else {
-        wx.showToast({
-          title: '登录失败',
-          icon: 'none',
-          duration: 10000
-        });
+  if (this.data.isChecked==false){
+    wx.showToast({
+      title: '请勾选用户协议',
+      icon: 'none',
+      duration: 1000
+    });
+  }else{
+    wx.request({
+      url: 'http://'+app.globalData.ip+'/myapp/wx_login/', 
+      data: {
+        username: this.data.username,
+        password: this.data.password
+      },
+      success: res => {
+        if (res.data.status) {
+          wx.showToast({
+            title: '登录成功',
+            icon: 'success',
+            duration: 10000
+          });
+  
+          // 更新全局变量
+          const app = getApp();
+          app.globalData.username = this.data.username;
+          wx.navigateTo({
+            url: '/pages/index/index'
+          });
+          // 进行其他操作，例如页面跳转
+        } else {
+          wx.showToast({
+            title: '账号或密码错误',
+            icon: 'none',
+            duration: 1000
+          });
+        }
       }
-    }
-  });
+    });
+  }
+  
 }
 
 })
